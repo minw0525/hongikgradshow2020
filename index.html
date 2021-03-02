@@ -22,6 +22,7 @@
             align-items: center;
             justify-content: center;
             top:0;
+            overflow: hidden;
         }
         footer{
             position: absolute;
@@ -44,6 +45,7 @@
         ul.deptList{
             display: flex;
             margin: 0;
+            font-size:1.3rem;
             list-style: none;
             transform-style: preserve-3d;
             animation: three-dimensions-circle 30s linear infinite;
@@ -58,42 +60,50 @@
             width:15em;
         }
         li.dept:nth-child(1){
-            transform: translate(-50%, -50%) rotate(0deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(0deg) translateY(-700px) rotateX(90deg);
         }
         li.dept:nth-child(2){
-            transform: translate(-50%, -50%) rotate(36deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(calc(360deg / 11)) translateY(-700px) rotateX(90deg);
         }
         li.dept:nth-child(3){
-            transform: translate(-50%, -50%) rotate(72deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(calc(720deg / 11)) translateY(-700px) rotateX(90deg);
         }
         li.dept:nth-child(4){
-            transform: translate(-50%, -50%) rotate(108deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(calc(1080deg / 11)) translateY(-700px) rotateX(90deg);
         }
         li.dept:nth-child(5){
-            transform: translate(-50%, -50%) rotate(144deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(calc(1440deg / 11)) translateY(-700px) rotateX(90deg);
         }
         li.dept:nth-child(6){
-            transform: translate(-50%, -50%) rotate(180deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(calc(1800deg / 11)) translateY(-700px) rotateX(90deg);
         }
         li.dept:nth-child(7){
-            transform: translate(-50%, -50%) rotate(216deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(calc(2160deg / 11)) translateY(-700px) rotateX(90deg);
         }
         li.dept:nth-child(8){
-            transform: translate(-50%, -50%) rotate(252deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(calc(2520deg / 11)) translateY(-700px) rotateX(90deg);
         }
         li.dept:nth-child(9){
-            transform: translate(-50%, -50%) rotate(288deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(calc(2880deg / 11)) translateY(-700px) rotateX(90deg);
         }
         li.dept:nth-child(10){
-            transform: translate(-50%, -50%) rotate(324deg) translateY(-500px) rotateX(90deg);
+            transform: translate(-50%, -50%) rotate(calc(3240deg / 11)) translateY(-700px) rotateX(90deg);
+        }
+        li.dept:nth-child(11){
+            transform: translate(-50%, -50%) rotate(calc(3600deg / 11)) translateY(-700px) rotateX(90deg);
         }
         @keyframes three-dimensions-circle {
             0% {
-                transform: rotateX(-100deg) rotate(0);
+                transform: rotateX(-120deg) rotateY(-10deg) rotate(0);
             }
             100% {
-                transform: rotateX(-100deg) rotate(-360deg);
+                transform: rotateX(-120deg) rotateY(-10deg) rotate(-360deg);
             }
+        }
+        .graphic{
+            background: url(source/1.gif) no-repeat fixed center center / contain;
+            width:70%;
+            height:70%;
         }
     </style>
 </head>
@@ -142,8 +152,13 @@
                     금속조형디자인<br>
                     Metal Art and Design
                 </li>
+                <li class="dept">
+                    예술학<br>
+                    Art Histofy and Theory
+                </li>
             </ul>
         </div>
+        <div class="graphic">
     </section>
     <div id="about" class="block">About</div>
     <footer>
