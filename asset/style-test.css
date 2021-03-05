@@ -10,6 +10,7 @@ font-family: 'Noto Serif KR', serif; 한*/
     --font_family: covik-sans-mono, AritaDotum, Roboto, sans-serif;
     --font_h1: 500 2rem/2.4rem 'Noto Serif KR', serif;
     --font_small: 400 1.2rem/1.4rem 'Noto Sans KR', sans-serif;
+    --font_orbit: 500 calc(1rem + 1vw) / calc(1.2rem + 1.2vw) 'Noto Serif KR', serif;
     /*BG palette*/
     --color: aquamarine; /*TAFD*/
     --color2: ; /*Sculpture*/
@@ -99,15 +100,12 @@ li.dept {
     position: absolute;
     display: inline-block;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15em;
+    display: inline;
+    white-space: nowrap;
     animation: background-blur 22s alternate infinite;
-    font: var(--font_h1);
+    font: var(--font_orbit);
 }
 li.dept:hover {
-    color: white;
     cursor: pointer;
 }
 li.dept:nth-child(1) {
@@ -205,34 +203,29 @@ li.dept:nth-child(11) {
     background: center center / contain no-repeat;
     animation-delay: 0s;
     animation-duration: 3s;
-    transform: translate(-19%, 8%);
 }
 .graphic > div:nth-child(2) {
     background:  center center / contain no-repeat;
     animation-delay: 0s;
     animation-name: down-up;
     animation-duration: 2.5s;
-    transform: translate(16%, 6%);
 }
 .graphic > div:nth-child(3) {
     background: center center / contain no-repeat;
     animation-delay: 1.5s;
     animation-duration: 3.5s;
-    transform: translate(-15%, 9%);
 }
 .graphic > div:nth-child(4) {
     background: center center / contain no-repeat;
     animation-delay: 1s;
     animation-duration: 3s;
     animation-name: down-up;
-    transform: translate(-23%, -21%);
 }
 .graphic > div:nth-child(5) {
     background: center center / contain no-repeat;*/
     animation-delay: 0.5s;
     animation-duration: 2.5s;
     animation-name: down-up;
-    transform: translate(0%, 9%);
 }
 footer {
     position: relative;

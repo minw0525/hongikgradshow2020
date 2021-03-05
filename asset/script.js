@@ -12,11 +12,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/tafd/textile_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 1, 
@@ -25,11 +21,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/sculpt/sculpture_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 2, 
@@ -38,11 +30,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/op/oriental_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 3, 
@@ -51,11 +39,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/id/industrial_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 4, 
@@ -64,11 +48,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/vcd/viscom_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 5, 
@@ -77,11 +57,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/c&g/ceramic_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 6, 
@@ -90,11 +66,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/paint/painting_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 7, 
@@ -103,11 +75,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/print/printmaking_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 8, 
@@ -116,11 +84,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/w&f/woodwork_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 9, 
@@ -129,11 +93,7 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/mad/metal_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
     },
     {
         idx: 10, 
@@ -142,12 +102,8 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/art/artstudies_`,
-        pos1 :'d',
-        pos2 :'d',
-        pos3 :'d',
-        pos4 :'d',
-        pos5 :'d'
-    }
+        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+  }
 ];
 
 
@@ -185,10 +141,10 @@ const deptList = [
         //console.log(Math.floor(theta*80)-25);//궤도 각도
         //console.log(clientHeight,clientWidth, leg, theta)//높이 너비 빗변 각도
 
-        let i = clientWidth / 3 + 150;
+        let i = clientWidth / 3 + 190;
         //console.log(-i);
         root.style.setProperty('--offset', -i + "px");
-        root.style.setProperty('--orbit', `rotateX(-115deg) rotateY(${Math.floor(theta*80)-25}deg)`);
+        root.style.setProperty('--orbit', `rotateX(-115deg) rotateY(${Math.floor(theta*85)-35}deg)`);
     
     })
 );
@@ -212,28 +168,36 @@ window.addEventListener('load', async ()=>{
     console.log(graphicDOM);
     const idx = Math.floor(Math.random()*11)
     for (const el of graphicDOM){
-        const i = graphicDOM.indexOf(el)+1;
+        const i = graphicDOM.indexOf(el);
         await initialDelay();
         el.style.backgroundImage = `${deptList[idx].url}${i}.png)`
+        console.log(deptList[idx])
+        el.style.transform = deptList[idx].pos[i]
     }
 })
 console.log(graphicDOM)
 const deptDOM = Array.from($('li.dept'));
 console.log(deptDOM)
+
+
 //dept mouse over event
 $.each($('li.dept'), (j, el)=>{
     console.log(j, el)
     $(el).mouseover(async ()=>{
         //tooltip event
-        const tooltip = $('.tooltip')
-        tooltip.css('display', 'block')
-        $('.exbInfo').html(`${deptList[j].title}<br>`)
+        const tooltip = $('.tooltip');
+        tooltip.css('display', 'block');
+        $('.exbInfo').html(`${deptList[j].title}<br>`);
 
+        //dept highlight
+        el.style.color = 'white';
+        $('li.dept').not(el).css('color', 'black')
         //graphic event
         for (const el of graphicDOM){
-            const i = graphicDOM.indexOf(el)+1;
+            const i = graphicDOM.indexOf(el);
             await initialDelay();
             el.style.backgroundImage = `${deptList[j].url}${i}.png`
+            el.style.transform = deptList[j].pos[i]
         }
         
     })
