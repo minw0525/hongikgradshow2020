@@ -11,7 +11,12 @@ const deptList = [
         title: '"tafd exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/tafd`
+        url : `url(./source/tafd/textile_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 1, 
@@ -19,7 +24,12 @@ const deptList = [
         title: '"sculpt exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/sculpt`
+        url : `url(./source/sculpt/sculpture_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 2, 
@@ -27,7 +37,12 @@ const deptList = [
         title: '"op exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/op`
+        url : `url(./source/op/oriental_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 3, 
@@ -35,7 +50,12 @@ const deptList = [
         title: '"id exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/i`
+        url : `url(./source/id/industrial_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 4, 
@@ -43,7 +63,12 @@ const deptList = [
         title: '"vcd exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/vcd`
+        url : `url(./source/vcd/viscom_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 5, 
@@ -51,7 +76,12 @@ const deptList = [
         title: '"c&g exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/c&g`
+        url : `url(./source/c&g/ceramic_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 6, 
@@ -59,7 +89,12 @@ const deptList = [
         title: '"paint exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/paint`
+        url : `url(./source/paint/painting_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 7, 
@@ -67,7 +102,12 @@ const deptList = [
         title: '"print exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/print`
+        url : `url(./source/print/printmaking_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 8, 
@@ -75,7 +115,12 @@ const deptList = [
         title: '"w&f exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/w&f`
+        url : `url(./source/w&f/woodwork_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 9, 
@@ -83,7 +128,12 @@ const deptList = [
         title: '"mad exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/mad`
+        url : `url(./source/mad/metal_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     },
     {
         idx: 10, 
@@ -91,7 +141,12 @@ const deptList = [
         title: '"art exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/art`
+        url : `url(./source/art/artstudies_`,
+        pos1 :'d',
+        pos2 :'d',
+        pos3 :'d',
+        pos4 :'d',
+        pos5 :'d'
     }
 ];
 
@@ -149,17 +204,17 @@ $('button').click(function(){
 })
 
 function initialDelay(){
-    return new Promise(res => setTimeout(res, 250));
+    return new Promise(res => setTimeout(res, 200));
 }
 
 const graphicDOM = Array.from($('.graphic > div'))
 window.addEventListener('load', async ()=>{
     console.log(graphicDOM);
+    const idx = Math.floor(Math.random()*11)
     for (const el of graphicDOM){
         const i = graphicDOM.indexOf(el)+1;
         await initialDelay();
-        el.style.backgroundImage = `url(./source/tafd${i}.png)`
-        console.log(i)
+        el.style.backgroundImage = `${deptList[idx].url}${i}.png)`
     }
 })
 console.log(graphicDOM)
@@ -173,17 +228,12 @@ $.each($('li.dept'), (j, el)=>{
         const tooltip = $('.tooltip')
         tooltip.css('display', 'block')
         $('.exbInfo').html(`${deptList[j].title}<br>`)
-        tooltip.css('top', deptList[j].Y);
-        tooltip.css('left', deptList[j].X);
 
         //graphic event
         for (const el of graphicDOM){
-            console.log(el)
             const i = graphicDOM.indexOf(el)+1;
             await initialDelay();
-            console.log(deptList[j].url)
             el.style.backgroundImage = `${deptList[j].url}${i}.png`
-            console.log(i)
         }
         
     })

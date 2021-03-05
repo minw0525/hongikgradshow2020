@@ -93,7 +93,7 @@ ul.deptList {
     font-size: 1.8rem;
     list-style: none;
     transform-style: preserve-3d;
-    animation: three-dimensions-circle 33s linear infinite;
+    animation: three-dimensions-circle 44s linear infinite;
 }
 li.dept {
     position: absolute;
@@ -103,7 +103,7 @@ li.dept {
     align-items: center;
     justify-content: center;
     width: 15em;
-    animation: background-blur 16.5s alternate infinite;
+    animation: background-blur 22s alternate infinite;
     font: var(--font_h1);
 }
 li.dept:hover {
@@ -118,52 +118,52 @@ li.dept:nth-child(1) {
 li.dept:nth-child(2) {
     transform: translate(-50%, -50%) rotate(calc(360deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -30s;
+        animation-delay: -4s;
 }
 li.dept:nth-child(3) {
     transform: translate(-50%, -50%) rotate(calc(720deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -27s;
+        animation-delay: -36s;
 }
 li.dept:nth-child(4) {
     transform: translate(-50%, -50%) rotate(calc(1080deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -24s;
+        animation-delay: -32s;
 }
 li.dept:nth-child(5) {
     transform: translate(-50%, -50%) rotate(calc(1440deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -21s;
+        animation-delay: -28s;
 }
 li.dept:nth-child(6) {
     transform: translate(-50%, -50%) rotate(calc(1800deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -18s;
+        animation-delay: -24s;
 }
 li.dept:nth-child(7) {
     transform: translate(-50%, -50%) rotate(calc(2160deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -15s;
+        animation-delay: -20s;
 }
 li.dept:nth-child(8) {
     transform: translate(-50%, -50%) rotate(calc(2520deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -12s;
+        animation-delay: -16s;
 }
 li.dept:nth-child(9) {
     transform: translate(-50%, -50%) rotate(calc(2880deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -9s;
+        animation-delay: -12s;
 }
 li.dept:nth-child(10) {
     transform: translate(-50%, -50%) rotate(calc(3240deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -6s;
+        animation-delay: -8s;
 }
 li.dept:nth-child(11) {
     transform: translate(-50%, -50%) rotate(calc(3600deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
-        animation-delay: -3s;
+        animation-delay: -4s;
 }
 @keyframes three-dimensions-circle {
     0% {
@@ -198,7 +198,7 @@ li.dept:nth-child(11) {
     min-width: 500px;
     width: 100%;
     height: 100%;
-    transition: all 1s;
+    transition: background-image 0.3s;
     animation: up-down alternate infinite ease-in-out;
 }
 .graphic > div:nth-child(1) {
@@ -245,14 +245,6 @@ footer > * {
     display: flex;
     align-items: center;
 }
-.sns {
-    width: 100%;
-    align-self: flex-end;
-    justify-content: flex-end;
-}
-.sns > a {
-    margin-left: 15px;
-}
 button {
     all: unset;
     position: absolute;
@@ -297,7 +289,9 @@ header .kr::after {
 }
 .tooltip{
     position: absolute;
-    font: var(--font_h1)
+    font: var(--font_h1);
+    bottom: 30px;
+    right: 25px;
 }
 @keyframes up-down {
     0% {
