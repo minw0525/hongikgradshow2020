@@ -86,7 +86,7 @@ ul.deptList {
     font-size: 1.8rem;
     list-style: none;
     transform-style: preserve-3d;
-    animation: three-dimensions-circle 30s linear infinite;
+    animation: three-dimensions-circle 33s linear infinite;
 }
 li.dept {
     position: absolute;
@@ -96,6 +96,7 @@ li.dept {
     align-items: center;
     justify-content: center;
     width: 15em;
+    animation: background-blur 16.5s alternate infinite;
 }
 li.dept:hover {
     color: white;
@@ -104,46 +105,57 @@ li.dept:hover {
 li.dept:nth-child(1) {
     transform: translate(-50%, -50%) rotate(0deg) translateY(var(--offset))
         rotateX(90deg) rotateZ(var(--zAngle));
+    animation-delay: 0s;
 }
 li.dept:nth-child(2) {
     transform: translate(-50%, -50%) rotate(calc(360deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -30s;
 }
 li.dept:nth-child(3) {
     transform: translate(-50%, -50%) rotate(calc(720deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -27s;
 }
 li.dept:nth-child(4) {
     transform: translate(-50%, -50%) rotate(calc(1080deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -24s;
 }
 li.dept:nth-child(5) {
     transform: translate(-50%, -50%) rotate(calc(1440deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -21s;
 }
 li.dept:nth-child(6) {
     transform: translate(-50%, -50%) rotate(calc(1800deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -18s;
 }
 li.dept:nth-child(7) {
     transform: translate(-50%, -50%) rotate(calc(2160deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -15s;
 }
 li.dept:nth-child(8) {
     transform: translate(-50%, -50%) rotate(calc(2520deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -12s;
 }
 li.dept:nth-child(9) {
     transform: translate(-50%, -50%) rotate(calc(2880deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -9s;
 }
 li.dept:nth-child(10) {
     transform: translate(-50%, -50%) rotate(calc(3240deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -6s;
 }
 li.dept:nth-child(11) {
     transform: translate(-50%, -50%) rotate(calc(3600deg / 11))
         translateY(var(--offset)) rotateX(90deg) rotateZ(var(--zAngle));
+        animation-delay: -3s;
 }
 @keyframes three-dimensions-circle {
     0% {
@@ -151,6 +163,20 @@ li.dept:nth-child(11) {
     }
     100% {
         transform: rotate(-360deg);
+    }
+}
+@keyframes background-blur {
+    0% {
+        filter: blur(0);
+    }
+    44% {
+        filter: blur(0);
+    }
+    66% {
+        filter: blur(0.25rem);
+    }
+    100%{
+        filter: blur(0.5rem);
     }
 }
 .graphic {
