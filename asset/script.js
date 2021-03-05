@@ -68,6 +68,6 @@ window.addEventListener('load', async ()=>{
         console.log(el)
         const i = list.indexOf(el)+1;
         await initialDelay();
-        el.style.backgroundImage = `url(/source/tafd${i}.png)`
+        el.style.backgroundImage = `url(./source/tafd${i}.png)`
     }
 })
