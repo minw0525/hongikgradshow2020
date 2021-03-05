@@ -194,7 +194,7 @@ li.dept:nth-child(11) {
     transform: translate(-23%, -21%);
 }
 .graphic > div:nth-child(5) {
-    background: url(/source/tafd5.png) center center / contain no-repeat;*/
+    background: center center / contain no-repeat;*/
     animation-delay: 0.5s;
     animation-duration: 2.5s;
     animation-name: down-up;
