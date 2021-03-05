@@ -46,3 +46,28 @@ let theta = Math.atan(clientHeight / clientWidth);
     
     })
 );
+
+$('button').click(function(){
+    if($('.modal').css('display') === 'none'){
+        $('.modal').css('display','block');
+    }else{
+        $('.modal').css('display','none');        
+    }
+    console.log(this)
+    this.children[0].classList.toggle('clickedBtn')
+})
+
+function initialDelay(){
+    return new Promise(res => setTimeout(res, 250));
+}
+
+window.addEventListener('load', async ()=>{
+    const list = Array.from($('.graphic > div'))
+    console.log(list);
+    for (const el of list){
+        console.log(el)
+        const i = list.indexOf(el)+1;
+        await initialDelay();
+        el.style.backgroundImage = `url(/source/tafd${i}.png)`
+    }
+})
