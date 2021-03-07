@@ -12,7 +12,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/tafd/textile_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#DACFE2'
     },
     {
         idx: 1, 
@@ -21,7 +23,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/sculpt/sculpture_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#FFDFB9'
     },
     {
         idx: 2, 
@@ -30,7 +34,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/op/oriental_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#CBEFFF'
     },
     {
         idx: 3, 
@@ -39,7 +45,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/id/industrial_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#E6E6E6'
     },
     {
         idx: 4, 
@@ -48,7 +56,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/vcd/viscom_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#FFFE48'
     },
     {
         idx: 5, 
@@ -57,7 +67,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/c&g/ceramic_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#FFDD80'
     },
     {
         idx: 6, 
@@ -66,7 +78,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/paint/painting_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#8EFFFF'
     },
     {
         idx: 7, 
@@ -75,7 +89,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/print/printmaking_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#74FFA4'
     },
     {
         idx: 8, 
@@ -84,7 +100,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/w&f/woodwork_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#D6FEA5'
     },
     {
         idx: 9, 
@@ -93,7 +111,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/mad/metal_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#FFFAC3'
     },
     {
         idx: 10, 
@@ -102,7 +122,9 @@ const deptList = [
         X : '66px',
         Y : '100px',
         url : `url(./source/art/artstudies_`,
-        pos :['translate(-23%, -21%)', 'translate(-15%, 9%)', 'translate(16%, 6%);', 'translate(-19%, 8%)', 'translate(0%, 9%)']
+        posT :['50%', '50%', '50%', '50%', '50%'],
+        posL :['50%', '50%', '50%', '50%', '50%'],
+        color: '#FFACFC'
   }
 ];
 
@@ -167,12 +189,14 @@ const graphicDOM = Array.from($('.graphic > div'))
 window.addEventListener('load', async ()=>{
     console.log(graphicDOM);
     const idx = Math.floor(Math.random()*11)
+    root.style.setProperty('--color', deptList[idx].color);
     for (const el of graphicDOM){
         const i = graphicDOM.indexOf(el);
         await initialDelay();
         el.style.backgroundImage = `${deptList[idx].url}${i}.png)`
         console.log(deptList[idx])
-        el.style.transform = deptList[idx].pos[i]
+        el.style.top = deptList[idx].posT[i];
+        el.style.left = deptList[idx].posL[i];
     }
 })
 console.log(graphicDOM)
@@ -184,6 +208,8 @@ console.log(deptDOM)
 $.each($('li.dept'), (j, el)=>{
     console.log(j, el)
     $(el).mouseover(async ()=>{
+        root.style.setProperty('--color', deptList[j].color);
+
         //tooltip event
         const tooltip = $('.tooltip');
         tooltip.css('display', 'block');
@@ -196,9 +222,9 @@ $.each($('li.dept'), (j, el)=>{
         for (const el of graphicDOM){
             const i = graphicDOM.indexOf(el);
             await initialDelay();
-            el.style.backgroundImage = `${deptList[j].url}${i}.png`
-            el.style.transform = deptList[j].pos[i]
+            el.style.backgroundImage = `${deptList[j].url}${i}.png`;
+            el.style.top = deptList[j].posT[i];
+            el.style.left = deptList[j].posL[i];
         }
-        
     })
 })
