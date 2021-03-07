@@ -4,6 +4,10 @@ let clientWidth = document.documentElement.clientWidth;
 let clientHeight = document.documentElement.clientHeight;
 let theta = Math.atan(clientHeight / clientWidth);
 
+const graphicDOM = Array.from($('.graphic > div'))
+const deptDOM = Array.from($('li.dept'));
+
+
 const deptList = [
     {
         idx: 0, 
@@ -11,7 +15,7 @@ const deptList = [
         title: '"tafd exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/tafd/textile_`,
+        url : `./source/tafd/textile_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#DACFE2'
@@ -22,7 +26,7 @@ const deptList = [
         title: '"sculpt exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/sculpt/sculpture_`,
+        url : `./source/sculpt/sculpture_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#FFDFB9'
@@ -33,7 +37,7 @@ const deptList = [
         title: '"op exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/op/oriental_`,
+        url : `./source/op/oriental_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#CBEFFF'
@@ -44,7 +48,7 @@ const deptList = [
         title: '"id exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/id/industrial_`,
+        url : `./source/id/industrial_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#E6E6E6'
@@ -55,7 +59,7 @@ const deptList = [
         title: '"vcd exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/vcd/viscom_`,
+        url : `./source/vcd/viscom_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#FFFE48'
@@ -66,7 +70,7 @@ const deptList = [
         title: '"c&g exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/c&g/ceramic_`,
+        url : `./source/c&g/ceramic_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#FFDD80'
@@ -77,7 +81,7 @@ const deptList = [
         title: '"paint exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/paint/painting_`,
+        url : `./source/paint/painting_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#8EFFFF'
@@ -88,7 +92,7 @@ const deptList = [
         title: '"print exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/print/printmaking_`,
+        url : `./source/print/printmaking_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#74FFA4'
@@ -99,7 +103,7 @@ const deptList = [
         title: '"w&f exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/w&f/woodwork_`,
+        url : `./source/w&f/woodwork_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#D6FEA5'
@@ -110,7 +114,7 @@ const deptList = [
         title: '"mad exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/mad/metal_`,
+        url : `./source/mad/metal_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#FFFAC3'
@@ -121,12 +125,26 @@ const deptList = [
         title: '"art exhibition"',
         X : '66px',
         Y : '100px',
-        url : `url(./source/art/artstudies_`,
+        url : `./source/art/artstudies_`,
         posT :['50%', '50%', '50%', '50%', '50%'],
         posL :['50%', '50%', '50%', '50%', '50%'],
         color: '#FFACFC'
   }
 ];
+
+//preload images
+let images = [];
+function preload(i, arr, url) {
+        arr[i] = new Image();
+        arr[i].src = `${url}${i}.png`;
+}
+for(let i = 0; i<deptList.length; i++){
+    let tempArr = [];
+    images.push(tempArr)
+    for(let k = 0; k<5; k++){
+        preload(k, tempArr, deptList[i].url)   
+    }
+}
 
 
 (function() {
@@ -143,14 +161,11 @@ const deptList = [
         };
         obj.addEventListener(type, func);
     };
-
     /* init - you can init any event */
     throttle("resize", "optimizedResize");
 })();
 
 // handle event
-
-
 ['load','optimizedResize'].forEach( evt => 
     window.addEventListener(evt, function() {
         clientWidth = document.documentElement.clientWidth;
@@ -171,60 +186,61 @@ const deptList = [
     })
 );
 
+
+
+//user event 
+//about btn click
 $('button').click(function(){
     if($('.modal').css('display') === 'none'){
         $('.modal').css('display','block');
     }else{
         $('.modal').css('display','none');        
     }
-    console.log(this)
     this.children[0].classList.toggle('clickedBtn')
 })
 
-function initialDelay(){
-    return new Promise(res => setTimeout(res, 200));
-}
-
-const graphicDOM = Array.from($('.graphic > div'))
-window.addEventListener('load', async ()=>{
+//graphic image change
+window.addEventListener('load', ()=>{
     console.log(graphicDOM);
     const idx = Math.floor(Math.random()*11)
-    root.style.setProperty('--color', deptList[idx].color);
-    for (const el of graphicDOM){
-        const i = graphicDOM.indexOf(el);
-        await initialDelay();
-        el.style.backgroundImage = `${deptList[idx].url}${i}.png)`
-        console.log(deptList[idx])
-        el.style.top = deptList[idx].posT[i];
-        el.style.left = deptList[idx].posL[i];
-    }
+    mouseEnterChange(idx)
 })
 console.log(graphicDOM)
-const deptDOM = Array.from($('li.dept'));
-console.log(deptDOM)
 
 
 //dept mouse over event
 $.each($('li.dept'), (j, el)=>{
     console.log(j, el)
-    $(el).mouseover(async ()=>{
-        root.style.setProperty('--color', deptList[j].color);
+    $(el).mouseover(()=>{
+        mouseEnterChange(j)
+
+        //dept highlight
+        el.style.color = 'white';
+        $('li.dept').not(el).css('color', 'black')
 
         //tooltip event
         const tooltip = $('.tooltip');
         tooltip.css('display', 'block');
         $('.exbInfo').html(`${deptList[j].title}<br>`);
 
-        //dept highlight
-        el.style.color = 'white';
-        $('li.dept').not(el).css('color', 'black')
-        //graphic event
-        for (const el of graphicDOM){
-            const i = graphicDOM.indexOf(el);
-            await initialDelay();
-            el.style.backgroundImage = `${deptList[j].url}${i}.png`;
-            el.style.top = deptList[j].posT[i];
-            el.style.left = deptList[j].posL[i];
-        }
     })
 })
+
+//200ms delay
+function initialDelay(){
+    return new Promise(res => setTimeout(res, 200));
+}
+
+async function mouseEnterChange(j){
+    //j === index of dept
+    root.style.setProperty('--color', deptList[j].color);
+
+    //i === index of graphic
+    for (const el of graphicDOM){
+        const i = graphicDOM.indexOf(el);
+        await initialDelay();
+        el.style.backgroundImage = `url(${images[j][i].src})`;
+        el.style.top = deptList[j].posT[i];
+        el.style.left = deptList[j].posL[i];
+    }
+}
