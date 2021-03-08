@@ -249,13 +249,23 @@ hr {
 .modal {
     font: var(--font_small);
     position: absolute;
-    padding: 21px 25px;
+    padding: 21px 5px 21px 25px;
     box-sizing: border-box;
     top: 80px;
     right: 25px;
     width: 380px;
     height: calc(100vh - 200px);
     overflow: auto;
+    scroll-padding: 50px 0 0 50px;
+}
+.modal::-webkit-scrollbar {
+    width: 20px;
+}
+.modal::-webkit-scrollbar-thumb {
+    outline: 1px solid black;
+    outline-offset: -7px;
+}
+.modal::-webkit-scrollbar-track {
 }
 .logo {
     height: 45px;

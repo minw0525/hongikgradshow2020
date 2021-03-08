@@ -132,20 +132,6 @@ const deptList = [
   }
 ];
 
-//preload images
-let images = [];
-function preload(i, arr, url) {
-        arr[i] = new Image();
-        arr[i].src = `${url}${i}.png`;
-}
-for(let i = 0; i<deptList.length; i++){
-    let tempArr = [];
-    images.push(tempArr)
-    for(let k = 0; k<5; k++){
-        preload(k, tempArr, deptList[i].url)   
-    }
-}
-
 
 (function() {
     const throttle = function(type, name, obj) {
@@ -186,18 +172,22 @@ for(let i = 0; i<deptList.length; i++){
     })
 );
 
+//preload images
+let images = [];
+function preload(i, arr, url) {
+        arr[i] = new Image();
+        arr[i].src = `${url}${i}.png`;
+}
+for(let i = 0; i<deptList.length; i++){
+    let tempArr = [];
+    images.push(tempArr)
+    for(let k = 0; k<5; k++){
+        preload(k, tempArr, deptList[i].url)   
+    }
+}
 
 
 //user event 
-//about btn click
-$('button').click(function(){
-    if($('.modal').css('display') === 'none'){
-        $('.modal').css('display','block');
-    }else{
-        $('.modal').css('display','none');        
-    }
-    this.children[0].classList.toggle('clickedBtn')
-})
 
 //graphic image change
 window.addEventListener('load', ()=>{
@@ -244,3 +234,13 @@ async function mouseEnterChange(j){
         el.style.left = deptList[j].posL[i];
     }
 }
+
+//about btn click
+$('button').click(function(){
+    if($('.modal').css('display') === 'none'){
+        $('.modal').css('display','block');
+    }else{
+        $('.modal').css('display','none');        
+    }
+    this.children[0].classList.toggle('clickedBtn')
+})
