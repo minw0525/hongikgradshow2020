@@ -5,15 +5,15 @@ let root = document.documentElement;
 const graphicDOM = Array.from($('.graphic > div'))
 const deptDOM = Array.from($('li.dept'));
 
-
 const deptList = [
     {
         idx: 0, 
         dept : 'tafd',
-        title: '"tafd exhibition"',
+        title: '미·완 (mi·wan)',
+        link: 'https://hongiktafd.com/',
         X : '66px',
         Y : '100px',
-        url : `./source/tafd/textile_`,
+        source : `./source/tafd/textile_`,
         posT :['-25%', '0%', '4%', '10%', '-20%'],
         posL :['-15%', '-8%', '-10%', '20%', '20%'],
         color: '#DACFE2'
@@ -21,10 +21,11 @@ const deptList = [
     {
         idx: 1, 
         dept : 'sculpt',
-        title: '"sculpt exhibition"',
+        title: 'Hongik University Sculpture Dept.',
+        link: 'https://hongiksculpture.com/',
         X : '66px',
         Y : '100px',
-        url : `./source/sculpt/sculpture_`,
+        source : `./source/sculpt/sculpture_`,
         posT :['-8%', '-2%', '10%', '-8%', '17%'],
         posL :['10%', '8%', '-10%', '-18%', '27%'],
         color: '#FFDFB9'
@@ -32,10 +33,11 @@ const deptList = [
     {
         idx: 2, 
         dept : 'op',
-        title: '"op exhibition"',
+        title: '2020 홍익 동양화',
+        link: 'https://hiop-bfa.com/',
         X : '66px',
         Y : '100px',
-        url : `./source/op/oriental_`,
+        source : `./source/op/oriental_`,
         posT :['16%', '-8%', '-2%', '-7%', '-16%'],
         posL :['-3%', '29%', '20%', '-21%', '-20%'],
         color: '#CBEFFF'
@@ -43,10 +45,11 @@ const deptList = [
     {
         idx: 3, 
         dept : 'id',
-        title: '"id exhibition"',
+        title: 'design without',
+        link: 'http://www.hongik-id-degreeshow.com/',
         X : '66px',
         Y : '100px',
-        url : `./source/id/industrial_`,
+        source : `./source/id/industrial_`,
         posT :['7%', '5%', '-23%', '18%', '-18%'],
         posL :['-5%', '10%', '-3%', '18%', '-2%'],
         color: '#E6E6E6'
@@ -54,10 +57,11 @@ const deptList = [
     {
         idx: 4, 
         dept : 'vcd',
-        title: '"vcd exhibition"',
+        title: '.zip',
+        link: 'http://www.hivcdgw2020.com/',
         X : '66px',
         Y : '100px',
-        url : `./source/vcd/viscom_`,
+        source : `./source/vcd/viscom_`,
         posT :['-2%', '8%', '-19%', '16%', '-10%'],
         posL :['16%', '-15%', '0%', '19%', '-30%'],
         color: '#FFFE48'
@@ -65,10 +69,11 @@ const deptList = [
     {
         idx: 5, 
         dept : 'c&g',
-        title: '"c&g exhibition"',
+        title: 'mingle–mangle',
+        link: 'http://www.hongikdoyugra.com/',
         X : '66px',
         Y : '100px',
-        url : `./source/c&g/ceramic_`,
+        source : `./source/c&g/ceramic_`,
         posT :['-8%', '-28%', '10%', '15%', '7%'],
         posL :['-15%', '15%', '9%', '-14%', '29%'],
         color: '#FFDD80'
@@ -76,10 +81,11 @@ const deptList = [
     {
         idx: 6, 
         dept : 'paint',
-        title: '"paint exhibition"',
+        title: 'Undefined (    )님이 모두에게:',
+        link: 'http://hongikpainting.com/',
         X : '66px',
         Y : '100px',
-        url : `./source/paint/painting_`,
+        source : `./source/paint/painting_`,
         posT :['-10%', '10%', '1%', '-28%', '11%'],
         posL :['-15%', '-17%', '20%', '25%', '7%'],
         color: '#8EFFFF'
@@ -87,10 +93,11 @@ const deptList = [
     {
         idx: 7, 
         dept : 'print',
-        title: '"print exhibition"',
+        title: '코끼리 프로젝트',
+        link: 'http://www.hongikprintmaking.com/',
         X : '66px',
         Y : '100px',
-        url : `./source/print/printmaking_`,
+        source : `./source/print/printmaking_`,
         posT :['-4%', '-6%', '2%', '22%', '0%'],
         posL :['6%', '0%', '-1%', '30%', '-18%'],
         color: '#74FFA4'
@@ -98,10 +105,11 @@ const deptList = [
     {
         idx: 8, 
         dept : 'w&f',
-        title: '"w&f exhibition"',
+        title: 'abocular',
+        link: 'http://www.hongikwfd.com/',
         X : '66px',
         Y : '100px',
-        url : `./source/w&f/woodwork_`,
+        source : `./source/w&f/woodwork_`,
         posT :['11%', '-3%', '8%', '-1%', '-3%'],
         posL :['26%', '-4%', '9%', '-15%', '1%'],
         color: '#D6FEA5'
@@ -109,10 +117,11 @@ const deptList = [
     {
         idx: 9, 
         dept : 'mad',
-        title: '"mad exhibition"',
+        title: '2020 홍익 금속조형',
+        link: 'https://2020himadgradshow.com',
         X : '66px',
         Y : '100px',
-        url : `./source/mad/metal_`,
+        source : `./source/mad/metal_`,
         posT :['2%', '-12%', '-8%', '2%', '-4%'],
         posL :['9%', '27%', '-17%', '4%', '0%'],
         color: '#FFFAC3'
@@ -120,10 +129,11 @@ const deptList = [
     {
         idx: 10, 
         dept : 'art',
-        title: '"art exhibition"',
+        title: 'Click, Scroll, Zoom!',
+        link: 'https://clickscrollzoom.com',
         X : '66px',
         Y : '100px',
-        url : `./source/art/artstudies_`,
+        source : `./source/art/artstudies_`,
         posT :['-12%', '6%', '18%', '-4%', '-2%'],
         posL :['0%', '13%', '-26%', '-28%', '28%'],
         color: '#FFACFC'
@@ -137,21 +147,13 @@ const deptList = [
         let running = false;
         let func = function() {
             if (running) { 
+                console.log('rAF가 여러번 발생하는것을 방지함');
                 return; 
             }
-            setTimeout(() => {
-                running = true;
-                requestAnimationFrame(function() {
-                    obj.dispatchEvent(new CustomEvent(name));
-                    running = false;
-            }, 44);
-            /*
-
             running = true;
              requestAnimationFrame(function() {
                 obj.dispatchEvent(new CustomEvent(name));
                 running = false;
-                */
             });
         };
         obj.addEventListener(type, func);
@@ -161,53 +163,50 @@ const deptList = [
 })();
 
 
-let clientWidth = document.documentElement.clientWidth;
-let clientHeight = document.documentElement.clientHeight;
-let theta = Math.atan(clientHeight / clientWidth);
-
+let mainWidth, mainHeight, theta, ratio, xDeg, yDeg, ellipseAngleRad, ellipseRadius;
 // handle event
 ['load','optimizedResize'].forEach( evt => 
     window.addEventListener(evt, function() {
-        clientWidth = document.documentElement.clientWidth;
-        clientHeight = document.documentElement.clientHeight;
-
-        //leg = Math.sqrt(Math.pow(clientHeight/2,2) + Math.pow(clientWidth/2,2)); //빗변
-
-        function degToRad(d){
-            return d * Math.PI / 180;
+        mainWidth = $('main').width();
+        mainHeight = $('main').height();;
+        ratio = mainHeight / mainWidth;
+        console.log(ratio)
+        if (ratio < 0.4285) {
+            xDeg = 100
+            yDeg = 10;
+            console.log (1, yDeg)
+        }else if(ratio >= 0.4285 && ratio < 2.33){
+            xDeg = -33.46*Math.pow(ratio ,2) + 100.3* ratio + 70;
+            yDeg = 33.88 * ratio -4;
+            console.log (2, yDeg)
+        }else{
+            xDeg = 115;
+            yDeg = 70
+            console.log (3, ratio)       
         }
 
-        let theta = Math.atan(clientHeight / clientWidth); //빗변 각도
-        let ellipseAngle = Math.floor(theta*85)-35;
-        let ellipseAngleRad = degToRad(Math.floor(theta*85)-35);
-        let ellipseRadius = (ellipseAngleRad >= theta) ?  Math.sqrt(Math.pow(clientHeight/2,2) + Math.pow(clientHeight / (2 * Math.tan(ellipseAngleRad), 2))) :  Math.sqrt(Math.pow(clientWidth/2,2) + Math.pow(clientWidth * Math.tan(ellipseAngleRad)/ 2, 2)); //빗변
-        //console.log(ellipseRadius)
+        theta = Math.atan(mainHeight / mainWidth); //빗변 각도
+        ellipseAngleRad = degToRad(yDeg);
+        console.log(ellipseAngleRad, theta)
+        ellipseRadius = (ellipseAngleRad >= theta) ?  Math.sqrt(Math.pow(mainHeight/2,2) + Math.pow(mainHeight / (2 * Math.tan(ellipseAngleRad)),2)) :  Math.sqrt(Math.pow(mainWidth/2,2) + Math.pow(mainWidth * Math.tan(ellipseAngleRad)/ 2, 2)); //빗변
 
-
-        //console.log(Math.floor(theta*80)-25);//궤도 각도
-        //console.log(clientHeight,clientWidth, leg, theta)//높이 너비 빗변 각도
-
-        //let i = clientWidth / 3 + 190;
-        //console.log(-i);
-        //root.style.setProperty('--offset', -i + "px");
-        root.style.setProperty('--offset', -ellipseRadius + 100 + "px");
-        //console.log(theta, theta*180/Math.PI, Math.floor(theta*85)-35)
-        root.style.setProperty('--orbit', `rotateX(-115deg) rotateY(${ellipseAngle}deg)`);
+        root.style.setProperty('--offset', -ellipseRadius+50+ "px");
+        root.style.setProperty('--orbit', `rotateX(${-xDeg}deg) rotateY(${yDeg}deg)`);
     
     })
 );
 
 //preload images
 let images = [];
-function preload(i, arr, url) {
+function preload(i, arr, source) {
         arr[i] = new Image();
-        arr[i].src = `${url}${i}.png`;
+        arr[i].src = `${source}${i}.png`;
 }
 for(let i = 0; i<deptList.length; i++){
     let tempArr = [];
     images.push(tempArr)
     for(let k = 0; k<5; k++){
-        preload(k, tempArr, deptList[i].url)   
+        preload(k, tempArr, deptList[i].source)   
     }
 }
 
@@ -225,10 +224,6 @@ console.log(graphicDOM)
 
 //dept mouse over event
 $.each($('li.dept'), (j, el)=>{
-    console.log(j, el)
-
-    /* 호버 한번만 되게 하기   if(!el.classList.contains('activeDept')){
-        }*/
     $(el).mouseenter(()=>{
         if(!el.classList.contains('activeDept')){
             deptActive(j)
@@ -241,7 +236,7 @@ $.each($('li.dept'), (j, el)=>{
             const tooltip = $('.tooltip');
             tooltip.css('display', 'block');
             $('.exbInfo').html(`${deptList[j].title}<br>`);
-    
+            $('.link').attr('href', deptList[j].link)
         }
     })
 })
@@ -249,6 +244,10 @@ $.each($('li.dept'), (j, el)=>{
 //200ms delay
 function initialDelay(){
     return new Promise(res => setTimeout(res, 200));
+}
+
+function degToRad(d){
+    return d * Math.PI / 180;
 }
 
 async function deptActive(j){

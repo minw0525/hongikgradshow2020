@@ -173,6 +173,27 @@ let theta = Math.atan(clientHeight / clientWidth);
         let ellipseAngle = Math.floor(theta*85)-35;
         let ellipseAngleRad = degToRad(Math.floor(theta*85)-35);
         let ellipseRadius = (ellipseAngleRad >= theta) ?  Math.sqrt(Math.pow(clientHeight/2,2) + Math.pow(clientHeight / (2 * Math.tan(ellipseAngleRad), 2))) :  Math.sqrt(Math.pow(clientWidth/2,2) + Math.pow(clientWidth * Math.tan(ellipseAngleRad)/ 2, 2)); //빗변
+        
+                /*
+        if (ratio < 0.5625) {
+            xDeg = 74.6 * ratio + 68
+            yDeg = 10;
+            console.log (1, ratio)
+        }else if(ratio >= 0.5625 && ratio < 1){
+            xDeg = 34.3 * ratio + 90.7;
+            yDeg = 35.5 * ratio -10;
+            console.log (2, ratio)
+        }else if(ratio >= 1 && ratio < 1.67){
+            xDeg = -0.6 * ratio + 130;
+            yDeg = 35.5 * ratio -10;
+            console.log (3, ratio)
+        }else{
+            xDeg = 115;
+            yDeg = 35.5 * ratio -10;    
+            console.log (4, ratio)       
+        }
+        */
+
         //console.log(ellipseRadius)
 
 
@@ -218,9 +239,6 @@ console.log(graphicDOM)
 //dept mouse over event
 $.each($('li.dept'), (j, el)=>{
     console.log(j, el)
-
-    /* 호버 한번만 되게 하기   if(!el.classList.contains('activeDept')){
-        }*/
     $(el).mouseenter(()=>{
         if(!el.classList.contains('activeDept')){
             deptActive(j)
