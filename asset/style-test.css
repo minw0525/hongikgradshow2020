@@ -16,6 +16,7 @@ font-family: 'Noto Serif KR', serif; 한*/
     --color: #e6e6e6;
     /*orbiting angle*/
     --orbit: rotateX(-115deg) rotateY(10deg);
+    --deptWidth: ;
     /* --orbit-mid: rotateX(-120deg) rotateY(30deg) rotateZ(-30deg);
     --orbit-narrow: rotateX(-120deg) rotateY(50deg) rotateZ(-30deg);*/
     --offset: -45vw;
@@ -95,8 +96,8 @@ li.dept {
     position: absolute;
     display: inline-block;
     text-align: center;
-    display: inline;
-    white-space: nowrap;
+    width: var(--deptWidth);
+    /*white-space: nowrap;*/
     animation: background-blur 22s alternate infinite;
     font: var(--font_orbit);
 }

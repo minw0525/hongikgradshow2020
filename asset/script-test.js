@@ -151,10 +151,12 @@ const deptList = [
                 return; 
             }
             running = true;
-             requestAnimationFrame(function() {
-                obj.dispatchEvent(new CustomEvent(name));
-                running = false;
-            });
+            setTimeout(() => {
+                requestAnimationFrame(function() {
+                    obj.dispatchEvent(new CustomEvent(name));
+                    running = false;
+                });  
+            }, 17);
         };
         obj.addEventListener(type, func);
     };
@@ -188,9 +190,10 @@ let mainWidth, mainHeight, theta, ratio, xDeg, yDeg, ellipseAngleRad, ellipseRad
         theta = Math.atan(mainHeight / mainWidth); //빗변 각도
         ellipseAngleRad = degToRad(yDeg);
         console.log(ellipseAngleRad, theta)
-        ellipseRadius = (ellipseAngleRad >= theta) ?  Math.sqrt(Math.pow(mainHeight/2,2) + Math.pow(mainHeight / (2 * Math.tan(ellipseAngleRad)),2)) :  Math.sqrt(Math.pow(mainWidth/2,2) + Math.pow(mainWidth * Math.tan(ellipseAngleRad)/ 2, 2)); //빗변
+        ellipseRadius = (ellipseAngleRad >= theta) ?  Math.sqrt(Math.pow(mainHeight/2,2) + Math.pow(mainHeight / (2 * Math.tan(ellipseAngleRad)),2)) :  Math.sqrt(Math.pow(mainWidth/2,2) + Math.pow(mainWidth * Math.tan(ellipseAngleRad)/ 2, 2)) -50; //빗변
 
-        root.style.setProperty('--offset', -ellipseRadius+50+ "px");
+        root.style.setProperty('--offset', -ellipseRadius+ "px");
+        root.style.setProperty('--deptWidth', 2* ellipseRadius * Math.PI / 11 + "px");
         root.style.setProperty('--orbit', `rotateX(${-xDeg}deg) rotateY(${yDeg}deg)`);
     
     })
