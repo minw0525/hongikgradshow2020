@@ -6,11 +6,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="asset/normalize.css">
     <link rel="stylesheet" href="asset/style.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="asset/script.js"></script>
 </head>
 <body>
     <div class="container">
         <header><h1><span class="kr">홍익대학교 미술대학 졸업전시 2020</span><br class="onmobile"><span class="en">Hongik University College of Fine Arts 2020</span></h1></header>
         <main>
+            <div class="graphic">
+                <div  class="image">
+                </div>
+                <div class="image">
+                </div>
+                <div class="image">
+                </div>
+                <div class="image">
+                </div>
+                <div class="image">
+                </div>
+            </div>
             <div class="orbit">
                 <ul class="deptList">
                     <li class="dept">섬유미술패션디자인<br>Textile Art and Fashion Design</li>
@@ -26,7 +40,6 @@
                     <li class="dept">예술학<br>Art Histofy and Theory</li>
                 </ul>
             </div>
-            <div class="graphic"></div>
         </main>
         <footer>
             <img class="logo" src="source/hongiklogo.svg">
@@ -42,20 +55,6 @@
             <div class="info block">
                 webmaster@hongik.ac.kr<br>
                 All Rights Reserved by Hongik University
-            </div>
-            <div class="info sns">
-                <a href="">
-                    <span>Facebook</span>
-                </a>
-                <a href="">
-                    <span>Instagram</span>
-                </a>
-                <a href="">
-                    <span>Youtube</span>
-                </a>
-                <a href="">
-                    <span>Weibo</span>
-                </a>
             </div>
         </footer>
     </div>
@@ -91,8 +90,11 @@
             </div>
         </div>
     </div>
+    <div class="tooltip block" style="display: none;">
+        <span class="exbInfo"></span>
+        <a href="">Visit Website →</a>
+    </div>
 </body>
 <script>
-    document.querySelector('.logo')
 </script>
 </html>

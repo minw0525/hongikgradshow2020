@@ -137,13 +137,21 @@ const deptList = [
         let running = false;
         let func = function() {
             if (running) { 
-                console.log('rAF가 여러번 발생하는것을 방지함');
                 return; 
             }
+            setTimeout(() => {
+                running = true;
+                requestAnimationFrame(function() {
+                    obj.dispatchEvent(new CustomEvent(name));
+                    running = false;
+            }, 44);
+            /*
+
             running = true;
              requestAnimationFrame(function() {
                 obj.dispatchEvent(new CustomEvent(name));
                 running = false;
+                */
             });
         };
         obj.addEventListener(type, func);
