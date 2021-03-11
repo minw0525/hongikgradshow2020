@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Noto+Sans+KR:wght@300&family=Noto+Serif+KR&display=swap');
 /*font-family: 'EB Garamond', serif; 영
-font-family: 'Noto Sans KR', sans-serif; 캡 
-font-family: 'Noto Serif KR', serif; 한*/
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Noto Serif KR', serif;*/
+
 :root {
     font-size: 15px;
     /*size*/
     --vh: 1vh;
     --min_gap: 15px;
     /*font*/
-    --font_h1: 500 calc(0.85rem + 1vw) / calc(1rem + 1.8vw) 'Noto Serif KR',
+    --font_h1: 500 calc(0.85rem + 1vw) / calc(1rem + 1.8vw) 'Noto Sans KR',
         serif;
     --font_mid: 400 calc(0.7rem + 1.5vw) / calc(1rem + 2.4vw) 'Noto Sans KR',
         sans-serif;
     --font_small: 400 calc(0.4rem + 0.6vw) / calc(0.6rem + 0.9vw) 'Noto Sans KR',
         sans-serif;
-    --font_orbit: 500 calc(0.5rem + 1vw) / calc(0.6rem + 0.96vw) 'Noto Serif KR',
+    --font_orbit: 500 calc(0.6rem + 1vw) / calc(0.6rem + 0.96vw) 'Noto Serif KR',
         serif;
     /*BG palette*/
     --color: #e6e6e6;
@@ -42,11 +42,7 @@ body {
 a {
     color: inherit;
     text-decoration-thickness: from-font;
-    text-underline-offset: 10%;
-}
-.ml-en,
-.ml-num {
-    font-family: 'EB Garamond', serif;
+    text-underline-offset: 7%;
 }
 .container {
     padding: 20px 25px;
@@ -73,7 +69,7 @@ main {
     height: 100%;
     position: relative;
     box-sizing: border-box;
-    padding: 5vh 3vw;
+    padding: 3vh 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +97,7 @@ ul.deptList {
     display: flex;
     position: absolute;
     margin: 0;
-    font: var(--font_orbit)
+    font: var(--font_orbit);
     list-style: none;
     transform-style: preserve-3d;
     animation: three-dimensions-circle 44s linear infinite;
@@ -117,8 +113,7 @@ li.dept {
     z-index: 0;
 }
 .activeDept {
-    color: white;
-    /*font-weight: bold;*/
+    font-weight: bold !important;
     filter: blur(0) !important;
 }
 li.dept:hover {
@@ -219,7 +214,7 @@ li.dept:nth-child(11) {
     animation: up-down alternate infinite ease-in-out;
     background: center center / contain no-repeat;
     will-change: transform;
-    outline:none;
+    outline: none;
     pointer-events: none;
     z-index: 5;
 }
@@ -261,7 +256,7 @@ footer > div {
     align-items: center;
     font: var(--font_small);
 }
-button{
+button {
     all: unset;
 }
 #about {
@@ -272,13 +267,16 @@ button{
     padding: 0 6px;
     text-align: center;
 }
+#about * {
+    pointer-events: none;
+}
 .clickedBtn {
     font-style: italic !important;
 }
 hr {
     background-color: black;
     border: none;
-    width:100%;
+    width: 100%;
     height: 1px;
 }
 .modal {
@@ -295,14 +293,16 @@ hr {
     line-height: calc(0.9rem + 1vw);
     overflow: auto;
     overflow-x: hidden;
-    z-index: 10;
+    z-index: 11;
 }
-.modal hr{
+.modal * {
+    pointer-events: none;
+}
+.modal hr {
     margin: 20px 0;
-    
 }
-.modal p:first-of-type{
-    margin-top:0;
+.modal p:first-of-type {
+    margin-top: 0;
 }
 .modal::-webkit-scrollbar {
     width: 20px;
@@ -318,11 +318,11 @@ hr {
         padding-right: 25px;
     }
 }
-.modal-content{
+.modal-content {
     display: flex;
     flex-direction: column;
 }
-.subtitle{
+.subtitle {
     text-decoration: underline;
     text-underline-offset: 10%;
 }
@@ -345,14 +345,30 @@ header .kr::after {
 .tooltip {
     position: absolute;
     white-space: nowrap;
+    transition: background-color 0.3s;
     font: var(--font_h1);
-    width:fit-content;
+    font-family: 'Noto Serif KR', serif;
+    width: fit-content;
     padding: 0 10px;
     top: calc(3rem + 2vw);
     left: 25px;
+    z-index: 10;
 }
-.tooltip .ml-en, .tooltip .ml-num {
+.title1::after {
+    margin-left: 15px;
+}
+.exbInfo .ml-en {
     font-style: italic;
+}
+.title2 {
+    margin-left: calc(0.5rem + 0.5vw);
+}
+#about .ml-en,
+.tooltip .ml-en,
+.tooltip .ml-en,
+.en .ml-en,
+.dept .ml-en {
+    font-family: 'EB Garamond', serif;
 }
 @keyframes up-down {
     0% {
@@ -375,12 +391,11 @@ header .kr::after {
     }
 }
 
-
 @media screen and (max-width: 1300px) {
     .ontablet {
         display: inline;
     }
-    .tooltip{
+    .tooltip {
         top: calc(4rem + 3.5vw);
     }
     .graphic > img {
@@ -422,15 +437,19 @@ header .kr::after {
     .modal {
         top: calc(1.9rem + 3vw);
         right: 14px;
-        padding:14px;
+        padding: 14px;
         width: calc(100vw - 28px);
-        height: calc(100 * var(--vh) - 100px);
-        font: var(--font_mid); 
+        height: calc(100 * var(--vh) - 200px);
+        font: var(--font_mid);
+        min-width: unset;
     }
     .tooltip {
         top: calc(2.5rem + 4vw + 30px);
         left: 14px;
-    }calc(0.85rem + 1vw)
+    }
+    .title2 {
+        margin-left: 0;
+    }
 }
 /*
 @media 

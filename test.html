@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="asset/normalize.css">
     <link rel="stylesheet" href="asset/style-test.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -13,7 +15,7 @@
 <body>
     <div class="container">
         <header>
-            <h1><span class="kr">홍익대학교 미술대학 졸업전시 2020 </span><br class="ontablet"><span class="en"> Hongik University College of Fine Art<br class="onmobile"> Grad Shows 2020</span></h1>
+            <h1><span class="kr">홍익대학교 미술대학 졸업전시 2020 </span><br class="ontablet"><span class="en"> Hongik University College of Fine Arts<br class="onmobile"> Grad Shows 2020</span></h1>
             <button id="about" class="block"><h1>About</h1></button>
         </header>
         <main>
@@ -66,7 +68,7 @@
     </div>
     <div class="modal block" style="display: none;">
         <div class="modal-content">
-            <div class="greeting kr">
+            <div class="greeting">
                 <p>
                     미술대학 학장 인사
                 </p>
@@ -81,7 +83,7 @@
                 </p>
             </div>
             <hr>
-            <div class="greeting en">
+            <div class="greeting">
                 <p>
                     Greetings
                 </p>
@@ -94,58 +96,58 @@
                 </p>
             </div>
             <hr>
-            <div class="plan kr">
+            <div class="plan">
                 <p>
                     <span class="subtitle">웹사이트 기획</span><br>
                     홍익대학교 미술대학
                 </p>
             </div>
-            <div class="support kr">
+            <div class="support">
                 <p>
                     <span class="subtitle">웹사이트 구축 지원</span><br>
                     홍익대학교 대학교육혁신사업단
                 </p>
             </div>
-            <div class="design kr">
+            <div class="design">
                 <p>
                     <span class="subtitle">웹사이트 디자인</span><br>
                     YinYang
                 </p>
             </div>
-            <div class="dev kr">
+            <div class="dev">
                 <p>
                     <span class="subtitle">웹사이트 개발</span> <br>
                     박민우
                 </p>
             </div>
-            <div class="plan en">
+            <div class="plan">
                 <p>
                     <span class="subtitle">Planning</span><br>
                     College of Fine Arts, Hongik Univeristy
                 </p>
             </div>
-            <div class="support en">
+            <div class="support">
                 <p>
                     <span class="subtitle">Support</span> <br>
                     University Education Innovation Team, Hongik University
                 </p>
             </div>
 
-            <div class="design en">
+            <div class="design">
                 <p>
                     <span class="subtitle">Design</span> <br>
                     YinYang
                 </p>
             </div>
 
-            <div class="dev en">
+            <div class="dev">
                 <p>
                     <span class="subtitle">Development</span> <br>
                     Minwoo Park
                 </p>
             </div>
             <hr>
-            <div class="copyright en">
+            <div class="copyright">
                 <p>
                     ©All Rights Reserved by Hongik University  
                 </p>
@@ -164,15 +166,13 @@
         </div>
     </div>
     <div class="tooltip block" style="display: none;">
-        <span class="exbInfo"></span>
+        <span class="exbInfo title1"></span><span class="exbInfo title2"></span><br>
         <a class="link" href="" target="_blank">Visit Website →</a>
     </div>
 </body>
 <script>
   $(document).ready(function(e){
-    $('body').multilingual([
-      "en", "num"
-    ]);
+    $('body').not($('.modl')).multilingual(["en"]);
   });
 </script>
 </html>

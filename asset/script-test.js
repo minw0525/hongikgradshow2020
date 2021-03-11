@@ -5,12 +5,16 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const graphicDOM = Array.from($('.graphic > img'))
 const deptDOM = Array.from($('li.dept'));
+const exbInfo = $('.exbInfo');
+const tooltip = $('.tooltip');
+const modal = $('.modal')
 
 const deptList = [
     {
         idx: 0, 
         dept : 'tafd',
-        title: '“미·완 (mi·wan)”',
+        title: '미·완 (mi·wan)',
+        title2: '',
         link: 'https://hongiktafd.com/',
         X : '66px',
         Y : '100px',
@@ -36,7 +40,8 @@ const deptList = [
     {
         idx: 1, 
         dept : 'sculpt',
-        title: '“Hongik University Sculpture Dept.”',
+        title: 'Hongik University Sculpture Dept.',
+        title2: '',
         link: 'https://hongiksculpture.com/',
         X : '66px',
         Y : '100px',
@@ -48,7 +53,8 @@ const deptList = [
     {
         idx: 2, 
         dept : 'op',
-        title: '“2020 홍익 동양화”',
+        title: '2020 홍익 동양화',
+        title2: '  Oriental Painting Grad Exhibition 2020',
         link: 'https://hiop-bfa.com/',
         X : '66px',
         Y : '100px',
@@ -60,7 +66,8 @@ const deptList = [
     {
         idx: 3, 
         dept : 'id',
-        title: '“design without”',
+        title: 'design without',
+        title2: '',
         link: 'http://www.hongik-id-degreeshow.com/',
         X : '66px',
         Y : '100px',
@@ -72,7 +79,8 @@ const deptList = [
     {
         idx: 4, 
         dept : 'vcd',
-        title: '“.zip”',
+        title: '.zip',
+        title2: '',
         link: 'http://www.hivcdgw2020.com/',
         X : '66px',
         Y : '100px',
@@ -84,7 +92,8 @@ const deptList = [
     {
         idx: 5, 
         dept : 'c&g',
-        title: '“mingle–mangle”',
+        title: 'mingle–mangle',
+        title2: '',
         link: 'http://www.hongikdoyugra.com/',
         X : '66px',
         Y : '100px',
@@ -96,7 +105,8 @@ const deptList = [
     {
         idx: 6, 
         dept : 'paint',
-        title: '“Undefined (    )님이 모두에게:”',
+        title: 'Undefined (    )님이 모두에게:',
+        title2: '  from undefined(  ) to everyone:',
         link: 'http://hongikpainting.com/',
         X : '66px',
         Y : '100px',
@@ -108,7 +118,8 @@ const deptList = [
     {
         idx: 7, 
         dept : 'print',
-        title: '“코끼리 프로젝트”',
+        title: '코끼리 프로젝트',
+        title2: '  Elephant Project',
         link: 'http://www.hongikprintmaking.com/',
         X : '66px',
         Y : '100px',
@@ -120,7 +131,8 @@ const deptList = [
     {
         idx: 8, 
         dept : 'w&f',
-        title: '“abocular”',
+        title: 'abocular',
+        title2: '',
         link: 'http://www.hongikwfd.com/',
         X : '66px',
         Y : '100px',
@@ -132,7 +144,8 @@ const deptList = [
     {
         idx: 9, 
         dept : 'mad',
-        title: '“2020 홍익 금속조형”',
+        title: '2020 홍익 금속조형',
+        title2: '  HIMAD Grad Show 2020',
         link: 'https://2020himadgradshow.com',
         X : '66px',
         Y : '100px',
@@ -144,7 +157,8 @@ const deptList = [
     {
         idx: 10, 
         dept : 'art',
-        title: '“Click, Scroll, Zoom!”',
+        title: '클릭, 스크롤, 줌하라!',
+        title2: '  Click, Scroll, Zoom!',
         link: 'https://clickscrollzoom.com',
         X : '66px',
         Y : '100px',
@@ -272,17 +286,20 @@ $.each($('li.dept'), (j, el)=>{
     $(el).mouseenter((evt)=>{
         if(!el.classList.contains('activeDept')){
 
-            deptActive(j)
-
             //dept highlight/blur
             el.classList.add('activeDept');
             $('li.dept').not(el).removeClass('activeDept')
             
             //tooltip event
-            const tooltip = $('.tooltip');
             tooltip.css('display', 'block');
-            $('.exbInfo').html(`${deptList[j].title}<br>`);
+            $('.title1').text(deptList[j].title)
+            if (!deptList[j].title2) {$('.title2').css('display','none')}
+            else($('.title2').text(`<br class="onmobile">${deptList[j].title2}`).css('display','inline'))
             $('.link').attr('href', deptList[j].link)
+            exbInfo.multilingual(['en'])
+
+            deptActive(j)
+
         }
     })
 })
@@ -320,13 +337,17 @@ async function deptActive(j){
         //el.style.opacity = 1;
     }
 }
-
 //about btn click
 $('button').click(function(){
-    if($('.modal').css('display') === 'none'){
-        $('.modal').css('display','block');
+    if(modal.css('display') === 'none'){
+        modal.css('display','block');
     }else{
-        $('.modal').css('display','none');        
+        modal.css('display','none');        
     }
     this.children[0].classList.toggle('clickedBtn')
+})
+$('body').click((e)=>{
+    if(e.target !== $('button')[0] && e.target !== modal[0]){
+        modal.css('display', 'none')
+    }        
 })
