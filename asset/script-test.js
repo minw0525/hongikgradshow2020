@@ -308,8 +308,8 @@ async function deptActive(j){
         $el.css({
             visibility: 'hidden',
             opacity: 0,
-            top: deptList[j].posT[i],
-            left: deptList[j].posL[i],
+            //: deptList[j].posT[i],
+            //left: deptList[j].posL[i],
         })
         $el.attr('src', images[j][i].src);
         await initialDelay();
