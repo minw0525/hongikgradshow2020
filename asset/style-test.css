@@ -114,6 +114,7 @@ li.dept {
     animation: background-blur 22s alternate infinite;
     font: var(--font_orbit);
     will-change: transform;
+    z-index: 0;
 }
 .activeDept {
     color: white;
@@ -219,6 +220,8 @@ li.dept:nth-child(11) {
     background: center center / contain no-repeat;
     will-change: transform;
     outline:none;
+    pointer-events: none;
+    z-index: 5;
 }
 .graphic > img:nth-child(1) {
     animation-delay: 0s;

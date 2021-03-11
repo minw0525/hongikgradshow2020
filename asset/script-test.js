@@ -191,7 +191,7 @@ function setGeoVars(){
     root.style.setProperty('--vh', `${vh}px`);
     mainWidth = $('main').width();
     mainHeight = $('main').height();
-    console.log('width: '+mainWidth, 'height: '+mainHeight) 
+    //console.log('width: '+mainWidth, 'height: '+mainHeight) 
     return new Promise(res => res(mainHeight / mainWidth));
 }
 
@@ -201,24 +201,24 @@ async function calculate(ratio){
     if (ratio < 0.4) {
         xDeg = 100
         yDeg = 10;
-        console.log (1, ratio, yDeg)
+        //console.log (1, ratio, yDeg)
     }else if(ratio >= 0.4 && ratio < 2.33){
         xDeg = -33.46*Math.pow(ratio ,2) + 100.3* ratio + 70;
         yDeg = 33.88 * ratio -4;
-        console.log (2, ratio, yDeg)
+        //console.log (2, ratio, yDeg)
     }else{
         xDeg = 115;
         yDeg = 70
-        console.log (3, ratio)       
+        //console.log (3, ratio)       
     }
 
     theta = Math.atan(mainHeight / mainWidth); //빗변 각도
     ellipseAngleRad = degToRad(yDeg);
-    console.log(ellipseAngleRad, theta)
+    //console.log(ellipseAngleRad, theta)
     ellipseRadius = (ellipseAngleRad >= theta) ?  Math.sqrt(Math.pow(mainHeight/2,2) + Math.pow(mainHeight / (2 * Math.tan(ellipseAngleRad)),2)) -5*vh :  Math.sqrt(Math.pow(mainWidth/2,2) + Math.pow(mainWidth * Math.tan(ellipseAngleRad)/ 2, 2)) -5*vh; //빗변
 }
 async function setRootCss(){
-    console.log('set css')
+    //console.log('set css')
 
     $(root).css({
         '--offset': -ellipseRadius+ "px",
@@ -238,7 +238,7 @@ let delay = 250; // delay after event is "complete" to run callback
             await setGeoVars()
             .then(calculate)
             setRootCss()
-            console.log('resizing')
+            //console.log('resizing')
         }, delay);    
     })
 );
@@ -262,17 +262,16 @@ for(let i = 0; i<deptList.length; i++){
 
 //graphic image change
 window.addEventListener('load', ()=>{
-    console.log(graphicDOM);
     const idx = Math.floor(Math.random()*11)
     deptActive(idx)
 })
-console.log(graphicDOM)
 
 
 //dept mouse over event
 $.each($('li.dept'), (j, el)=>{
-    $(el).mouseenter(()=>{
+    $(el).mouseenter((evt)=>{
         if(!el.classList.contains('activeDept')){
+
             deptActive(j)
 
             //dept highlight/blur
