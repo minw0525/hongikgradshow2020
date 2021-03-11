@@ -1,63 +1,78 @@
 let root = document.documentElement;
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
-
-const graphicDOM = Array.from($('.graphic > div'))
+const graphicDOM = Array.from($('.graphic > img'))
 const deptDOM = Array.from($('li.dept'));
 
 const deptList = [
     {
         idx: 0, 
         dept : 'tafd',
-        title: '미·완 (mi·wan)',
+        title: '“미·완 (mi·wan)”',
         link: 'https://hongiktafd.com/',
         X : '66px',
         Y : '100px',
         source : `./source/tafd/textile_`,
+                // 21:9 ratio width=100%
+        posT :['-25%', '0%', '4%', '10%', '10%'],
+        posL :['35%', '42%', '40%', '60%', '50%'],
+        color: '#D090FF'
+
+        /*
+        16:9 ratio width=100%
         posT :['-25%', '0%', '4%', '10%', '-20%'],
         posL :['-15%', '-8%', '-10%', '20%', '20%'],
-        color: '#DACFE2'
+         */
+        
+         /*
+         
+        9:21 ratio width=100%
+        posT :['-35%', '-5%', '9%', 'null', '-20%'],
+        posL :['35%', '59%', '60%', 'null', '70%'],
+         */
     },
     {
         idx: 1, 
         dept : 'sculpt',
-        title: 'Hongik University Sculpture Dept.',
+        title: '“Hongik University Sculpture Dept.”',
         link: 'https://hongiksculpture.com/',
         X : '66px',
         Y : '100px',
         source : `./source/sculpt/sculpture_`,
         posT :['-8%', '-2%', '10%', '-8%', '17%'],
         posL :['10%', '8%', '-10%', '-18%', '27%'],
-        color: '#FFDFB9'
+        color: '#D2BEFF'
     },
     {
         idx: 2, 
         dept : 'op',
-        title: '2020 홍익 동양화',
+        title: '“2020 홍익 동양화”',
         link: 'https://hiop-bfa.com/',
         X : '66px',
         Y : '100px',
         source : `./source/op/oriental_`,
         posT :['16%', '-8%', '-2%', '-7%', '-16%'],
         posL :['-3%', '29%', '20%', '-21%', '-20%'],
-        color: '#CBEFFF'
+        color: '#84B4FF'
     },
     {
         idx: 3, 
         dept : 'id',
-        title: 'design without',
+        title: '“design without”',
         link: 'http://www.hongik-id-degreeshow.com/',
         X : '66px',
         Y : '100px',
         source : `./source/id/industrial_`,
         posT :['7%', '5%', '-23%', '18%', '-18%'],
         posL :['-5%', '10%', '-3%', '18%', '-2%'],
-        color: '#E6E6E6'
+        color: '#FF7C7C'
     },
     {
         idx: 4, 
         dept : 'vcd',
-        title: '.zip',
+        title: '“.zip”',
         link: 'http://www.hivcdgw2020.com/',
         X : '66px',
         Y : '100px',
@@ -69,19 +84,19 @@ const deptList = [
     {
         idx: 5, 
         dept : 'c&g',
-        title: 'mingle–mangle',
+        title: '“mingle–mangle”',
         link: 'http://www.hongikdoyugra.com/',
         X : '66px',
         Y : '100px',
         source : `./source/c&g/ceramic_`,
         posT :['-8%', '-28%', '10%', '15%', '7%'],
         posL :['-15%', '15%', '9%', '-14%', '29%'],
-        color: '#FFDD80'
+        color: '#FFB33B'
     },
     {
         idx: 6, 
         dept : 'paint',
-        title: 'Undefined (    )님이 모두에게:',
+        title: '“Undefined (    )님이 모두에게:”',
         link: 'http://hongikpainting.com/',
         X : '66px',
         Y : '100px',
@@ -93,7 +108,7 @@ const deptList = [
     {
         idx: 7, 
         dept : 'print',
-        title: '코끼리 프로젝트',
+        title: '“코끼리 프로젝트”',
         link: 'http://www.hongikprintmaking.com/',
         X : '66px',
         Y : '100px',
@@ -105,31 +120,31 @@ const deptList = [
     {
         idx: 8, 
         dept : 'w&f',
-        title: 'abocular',
+        title: '“abocular”',
         link: 'http://www.hongikwfd.com/',
         X : '66px',
         Y : '100px',
         source : `./source/w&f/woodwork_`,
         posT :['11%', '-3%', '8%', '-1%', '-3%'],
         posL :['26%', '-4%', '9%', '-15%', '1%'],
-        color: '#D6FEA5'
+        color: '#95FE17'
     },
     {
         idx: 9, 
         dept : 'mad',
-        title: '2020 홍익 금속조형',
+        title: '“2020 홍익 금속조형”',
         link: 'https://2020himadgradshow.com',
         X : '66px',
         Y : '100px',
         source : `./source/mad/metal_`,
         posT :['2%', '-12%', '-8%', '2%', '-4%'],
         posL :['9%', '27%', '-17%', '4%', '0%'],
-        color: '#FFFAC3'
+        color: '#DBF705'
     },
     {
         idx: 10, 
         dept : 'art',
-        title: 'Click, Scroll, Zoom!',
+        title: '“Click, Scroll, Zoom!”',
         link: 'https://clickscrollzoom.com',
         X : '66px',
         Y : '100px',
@@ -141,6 +156,7 @@ const deptList = [
 ];
 
 
+/*
 (function() {
     const throttle = function(type, name, obj) {
         obj = obj || window;
@@ -156,46 +172,74 @@ const deptList = [
                     obj.dispatchEvent(new CustomEvent(name));
                     running = false;
                 });  
-            }, 17);
-        };
+            }, 200);
         obj.addEventListener(type, func);
     };
-    /* init - you can init any event */
+    // init - you can init any event 
     throttle("resize", "optimizedResize");
 })();
 
+*/
 
-let mainWidth, mainHeight, theta, ratio, xDeg, yDeg, ellipseAngleRad, ellipseRadius;
+
+let mainWidth, mainHeight, theta, xDeg, yDeg, ellipseAngleRad, ellipseRadius;
 // handle event
-['load','optimizedResize'].forEach( evt => 
+//['load','optimizedResize'].forEach( evt => 
+
+function setGeoVars(){
+    vh = window.innerHeight * 0.01;
+    root.style.setProperty('--vh', `${vh}px`);
+    mainWidth = $('main').width();
+    mainHeight = $('main').height();
+    console.log('width: '+mainWidth, 'height: '+mainHeight) 
+    return new Promise(res => res(mainHeight / mainWidth));
+}
+
+async function calculate(ratio){
+    //ratio = mainHeight / mainWidth;
+    //console.log(ratio)
+    if (ratio < 0.4) {
+        xDeg = 100
+        yDeg = 10;
+        console.log (1, ratio, yDeg)
+    }else if(ratio >= 0.4 && ratio < 2.33){
+        xDeg = -33.46*Math.pow(ratio ,2) + 100.3* ratio + 70;
+        yDeg = 33.88 * ratio -4;
+        console.log (2, ratio, yDeg)
+    }else{
+        xDeg = 115;
+        yDeg = 70
+        console.log (3, ratio)       
+    }
+
+    theta = Math.atan(mainHeight / mainWidth); //빗변 각도
+    ellipseAngleRad = degToRad(yDeg);
+    console.log(ellipseAngleRad, theta)
+    ellipseRadius = (ellipseAngleRad >= theta) ?  Math.sqrt(Math.pow(mainHeight/2,2) + Math.pow(mainHeight / (2 * Math.tan(ellipseAngleRad)),2)) -5*vh :  Math.sqrt(Math.pow(mainWidth/2,2) + Math.pow(mainWidth * Math.tan(ellipseAngleRad)/ 2, 2)) -5*vh; //빗변
+}
+async function setRootCss(){
+    console.log('set css')
+
+    $(root).css({
+        '--offset': -ellipseRadius+ "px",
+        '--deptWidth': 2* ellipseRadius * Math.PI / 11 + "px",
+        '--orbit': `rotateX(${-xDeg}deg) rotateY(${yDeg}deg)`,
+    })
+}
+
+//debouncing 200ms;
+let timeout = false; // holder for timeout id
+let delay = 250; // delay after event is "complete" to run callback
+
+['load','resize'].forEach( evt => 
     window.addEventListener(evt, function() {
-        mainWidth = $('main').width();
-        mainHeight = $('main').height();;
-        ratio = mainHeight / mainWidth;
-        console.log(ratio)
-        if (ratio < 0.4285) {
-            xDeg = 100
-            yDeg = 10;
-            console.log (1, yDeg)
-        }else if(ratio >= 0.4285 && ratio < 2.33){
-            xDeg = -33.46*Math.pow(ratio ,2) + 100.3* ratio + 70;
-            yDeg = 33.88 * ratio -4;
-            console.log (2, yDeg)
-        }else{
-            xDeg = 115;
-            yDeg = 70
-            console.log (3, ratio)       
-        }
-
-        theta = Math.atan(mainHeight / mainWidth); //빗변 각도
-        ellipseAngleRad = degToRad(yDeg);
-        console.log(ellipseAngleRad, theta)
-        ellipseRadius = (ellipseAngleRad >= theta) ?  Math.sqrt(Math.pow(mainHeight/2,2) + Math.pow(mainHeight / (2 * Math.tan(ellipseAngleRad)),2)) :  Math.sqrt(Math.pow(mainWidth/2,2) + Math.pow(mainWidth * Math.tan(ellipseAngleRad)/ 2, 2)) -50; //빗변
-
-        root.style.setProperty('--offset', -ellipseRadius+ "px");
-        root.style.setProperty('--deptWidth', 2* ellipseRadius * Math.PI / 11 + "px");
-        root.style.setProperty('--orbit', `rotateX(${-xDeg}deg) rotateY(${yDeg}deg)`);
-    
+        clearTimeout(timeout);
+        timeout = setTimeout(async()=>{
+            await setGeoVars()
+            .then(calculate)
+            setRootCss()
+            console.log('resizing')
+        }, delay);    
     })
 );
 
@@ -266,8 +310,8 @@ async function deptActive(j){
             opacity: 0,
             top: deptList[j].posT[i],
             left: deptList[j].posL[i],
-            backgroundImage: `url(${images[j][i].src})`
         })
+        $el.attr('src', images[j][i].src);
         await initialDelay();
         $el.css({
             visibility: 'visible',

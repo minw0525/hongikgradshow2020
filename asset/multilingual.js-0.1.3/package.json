@@ -1,0 +1,26 @@
+{
+  "name": "multilingual.js",
+  "version": "0.1.3",
+  "description": "A javascript library for multilingual typesetting",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/multilingualjs/multilingual.js.git"
+  },
+  "keywords": [
+    "CJK",
+    "typography",
+    "js",
+    "composite",
+    "fonts"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  },
+  "author": "Wonyoung So <mail@wonyoung.so> (http://wonyoung.so/), E Roon Kang <eroonkang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/multilingualjs/multilingual.js/issues"
+  },
+  "homepage": "https://multilingualjs.github.io"
+}

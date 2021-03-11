@@ -6,24 +6,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="asset/normalize.css">
     <link rel="stylesheet" href="asset/style-test.css">
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="asset/script-test.js"></script>
+    <script defer src="asset/jquery.multilingual.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <header><h1><span class="kr">홍익대학교 미술대학 졸업전시 2020</span><br class="onmobile"><span class="en">Hongik University College of Fine Art Grad Shows 2020</span></h1></header>
+        <header><h1><span class="kr">홍익대학교 미술대학 졸업전시 2020</span><br class="ontablet"><span class="en">Hongik University College of Fine Art<br class="onmobile">Grad Shows 2020</span></h1></header>
         <main>
             <div class="graphic">
-                <div  class="image">
-                </div>
-                <div class="image">
-                </div>
-                <div class="image">
-                </div>
-                <div class="image">
-                </div>
-                <div class="image">
-                </div>
+                <img  class="image">
+                </img>
+                <img class="image">
+                </img>
+                <img class="image">
+                </img>
+                <img class="image">
+                </img>
+                <img class="image">
+                </img>
             </div>
             <div class="orbit">
                 <ul class="deptList">
@@ -44,17 +45,19 @@
         <footer>
             <img class="logo" src="source/hongiklogo.svg">
             </img>
-            <div class="info block">
-                04066 마포구 와우산로 94, 마포구, 홍익대학교<br>
-                04066 94, Wausan-ro, Mapo-gu, Seoul, Republic of Korea
-            </div>
-            <div class="info block">
-                Tel +82-2-320-1114<br>
-                Fax +82-2-320-1114
-            </div>
-            <div class="info block">
-                webmaster@hongik.ac.kr<br>
-                All Rights Reserved by Hongik University
+            <div>
+                <a href="https://www.hongik.ac.kr/" target="_blank">
+                    <div class="info block">
+                        홍익대학교<br>
+                        Hongik University
+                    </div>
+                </a>
+                <a href="https://cfa.hongik.ac.kr/index.do" target="_blank">
+                    <div class="info block">
+                            홍익대학교 미술대학<br>
+                            Hongik University College of Fine Arts
+                    </div>
+                 </a>
             </div>
         </footer>
     </div>
@@ -62,32 +65,98 @@
     <div class="modal block" style="display: none;">
         <div class="modal-content">
             <div class="greeting kr">
-                <span>
+                <p>
                     미술대학 학장 인사
-                </span>
+                </p>
                 <p>
                     안녕하십니까. 홍익대학교 미술대학은 한국의 대표적 작가와 디자이너를 가장 많이 배출한 최고의 미술대학입니다. 현재 11개 학과 2800여명의 학생이 재학중으로 세계 각국의 학생들과 교류하면서 새로운 문화예술의 트랜드를 주도하는 대학으로 발전하고 있습니다. 미술대학의 교수진은 홍익대학교를 중심으로 세계적으로 유명한 명문대학에서 수학하신 분들로 구성되어 새롭고 다양한 교육방법으로 진취적 예술가들을 양성하고 있습니다.
                 </p>
                 <p>
                     홍익대학교 미술대학은 70여년이 넘는 전통으로 이룩한 지금까지의 성과에 머무르지 않고 시대가 요구하는 미술의 흐름을 갈파하고 독자적 시각으로 새로운 예술의 가능성을 제시하는 창의적 인재를 배출하는데 주력할 것입니다. 이를 위하여 보다 깊이 있는 인문학적 교양을 토대로 새로이 등장하는 디지털을 중심으로 한 다양한 매체들을 적극적으로 수용하는 교육혁신을 진행하고 있습니다. 이것을 바탕으로 전통적 매체의 진정한 의미를 재발견하고 여러 장르를 이해하는 융합적 사고관을 갖춘 창의적 예술가가 육성되기를 기대하고 있습니다.    
                 </p>
-                <span>
+                <p>
                     김호연<br>미술대학 학장
-                </span>
+                </p>
             </div>
             <hr>
             <div class="greeting en">
-                <span><br>
+                <p><br>
                     Greetings
-                </span>
+                </p>
                 <p>
                     College of Fine Arts, Hongik University has produced numerous distinguished Korean artists, designers and thus has been ranked as one of the best art colleges. With an enrollment of 2,800 students in 11 departments at present, we have been leading a new cultural and artistic trend through interacting actively with students and artists from all of the world. Our faculty members who graduated from internationally prestigious universities invest their passion to foster promising artists with new and various teaching methodologies.            </p>
                 <p>
                     College of Fine Arts, Hongik University will not be satisfied with our great achievement and tradition of over 70 years and devote ourselves to produce creative and outstanding artists who will be able to propose new artistic possibilities based on full understanding of current artistic trends and their unique point of views. To attain this end, we have implemented educational innovation while deepening liberal education as humanities and accepting positively various new media including digital media. We expect that our innovative program would turn out creative artists who are able to rediscover authentic meaning of traditional media and thus equipped well with integrated thinking abilities.            </p>
-                <span>
+                <p>
                     Kim, Ho Yeon<br>Dean of College of Fine Arts
-                </span>
+                </p>
             </div>
+            <hr>
+            <div class="plan kr">
+                <p>
+                    <span class="subtitle">웹사이트 기획</span><br>
+                    홍익대학교 미술대학
+                </p>
+            </div>
+            <div class="plan en">
+                <p>
+                    <span class="subtitle">Planning</span><br>
+                    College of Fine Arts, Hongik Univeristy
+                </p>
+            </div>
+            <div class="support kr">
+                <p>
+                    <span class="subtitle">웹사이트 구축 지원</span><br>
+                    홍익대학교 대학교육혁신사업단
+                </p>
+            </div>
+            <div class="support en">
+                <p>
+                    <span class="subtitle">Support</span> <br>
+                    University Education Innovation Team, Hongik University
+                </p>
+            </div>
+            <div class="design kr">
+                <p>
+                    <span class="subtitle">웹사이트 디자인</span><br>
+                    YinYang
+                </p>
+            </div>
+            <div class="design en">
+                <p>
+                    <span class="subtitle">Design</span> <br>
+                    YinYang
+                </p>
+            </div>
+            <div class="dev kr">
+                <p>
+                    <span class="subtitle">웹사이트 개발</span> <br>
+                    박민우
+                </p>
+            </div>
+            <div class="dev en">
+                <p>
+                    <span class="subtitle">Development</span> <br>
+                    Minwoo Park
+                </p>
+            </div>
+            <hr>
+            <div class="copyright en">
+                <p>
+                    ©All Rights Reserved by Hongik University  
+                </p>
+            </div> 
+            <hr>
+            <p>
+                Contact <br>
+                webmaster@hongik.ac.kr <br>
+                Tel +82-2-320-1114 <br>
+                Fax +82-2-320-1114
+            </p>
+            <p>
+                04066 마포구 와우산로 94, 마포구, 홍익대학교 <br>
+                04066 94, Wausan-ro, Mapo-gu, Seoul, Republic of Korea
+            </p>
         </div>
     </div>
     <div class="tooltip block" style="display: none;">
@@ -96,5 +165,10 @@
     </div>
 </body>
 <script>
+  $(document).ready(function(e){
+    $('body').multilingual([
+      "en", "num"
+    ]);
+  });
 </script>
 </html>
