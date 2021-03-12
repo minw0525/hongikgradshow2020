@@ -8,7 +8,7 @@ font-family: 'Noto Serif KR', serif;*/
     --vh: 1vh;
     --min_gap: 15px;
     /*font*/
-    --font_h1: 500 calc(0.85rem + 1vw) / calc(1rem + 1.8vw) 'Noto Sans KR',
+    --font_h1: 500 calc(0.85rem + 1vw) / calc(1rem + 1.8vw) 'Noto Serif KR',
         serif;
     --font_mid: 400 calc(0.7rem + 1.5vw) / calc(1rem + 2.4vw) 'Noto Sans KR',
         sans-serif;
@@ -361,7 +361,6 @@ header .kr::after {
     white-space: nowrap;
     transition: background-color 0.3s;
     font: var(--font_h1);
-    font-family: 'Noto Serif KR', serif;
     width: fit-content;
     padding: 0 10px;
     top: calc(3rem + 2vw);
