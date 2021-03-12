@@ -351,3 +351,10 @@ $('body').click((e)=>{
         modal.css('display', 'none')
     }        
 })
+$('.close').click((e)=>{
+    if(modal.css('display') === 'block'){
+        modal.css('display','none');
+        document.getElementById('about').children[0].classList.toggle('clickedBtn')  
+        console.log('toggled')            
+    }
+})
