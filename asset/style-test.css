@@ -67,7 +67,7 @@ h1 {
 main {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     box-sizing: border-box;
     padding: 3vh 3vw;
     display: flex;
@@ -207,7 +207,7 @@ li.dept:nth-child(11) {
     min-width: 300px;
     /*width: 100%;*/
     height: 100%;
-    max-height: 100vw;
+    max-height: 45vw;
     aspect-ratio: 1;
     opacity: 1;
     transition: opacity 0.5s;
@@ -225,7 +225,7 @@ li.dept:nth-child(11) {
 .graphic > img:nth-child(2) {
     animation-delay: 0s;
     animation-name: down-up;
-    animation-duration: 2.5s;
+    animation-duration: 2s;
 }
 .graphic > img:nth-child(3) {
     animation-delay: 1.5s;
@@ -294,6 +294,7 @@ hr {
     overflow: auto;
     overflow-x: hidden;
     z-index: 11;
+    -webkit-transform: translate3d(0, 0, 3000px);
 }
 .modal * {
     pointer-events: none;
@@ -323,10 +324,15 @@ hr {
     z-index: 11;
     position: sticky;
     width: 100%;
-    bottom: -1px;
+    bottom: 0;
     font: var(--font_h1);
     padding-bottom: 20px;
+    text-align: center;
     pointer-events: inherit;
+}
+.close div {
+    pointer-events: inherit;
+    cursor: pointer;
 }
 .close hr {
     margin-top: 0;
@@ -411,9 +417,6 @@ header .kr::after {
     .tooltip {
         top: calc(4rem + 3.5vw);
     }
-    .graphic > img {
-        height: 80%;
-    }
 }
 @media screen and (max-width: 1024px) {
 }
@@ -422,10 +425,18 @@ header .kr::after {
         width: 20vw;
         margin-right: 7px;
     }
+    .graphic > img {
+        height: 80%;
+        max-height: 65vw;
+    }
 }
 @media screen and (max-width: 530px) {
     .container {
         padding: 11px 14px;
+    }
+    .graphic > img {
+        height: 80%;
+        max-height: 110vw;
     }
     .onmobile {
         display: block;
@@ -436,7 +447,8 @@ header .kr::after {
     .graphic > img {
         height: 100%;
     }
-    #about {
+    #about,
+    .close div {
         padding: 1px 4px;
         width: 3.3rem;
     }
@@ -445,7 +457,8 @@ header .kr::after {
         margin-left: 6px;
     }
     .modal {
-        top: calc(1.9rem + 3vw);
+        /*top: calc(1.9rem + 3vw);*/
+        top: calc(0.85rem + 1vw + 26px);
         right: 14px;
         padding: 14px 14px 0 14px;
         width: calc(100vw - 28px);
