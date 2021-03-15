@@ -365,7 +365,7 @@ hr {
 header .kr::after {
     content: '';
     display: inline-block;
-    width: 10px;
+    width: 7px;
 }
 .onmobile {
     display: none;
@@ -379,7 +379,7 @@ header .kr::after {
     transition: background-color 0.3s;
     font: var(--font_h1);
     width: fit-content;
-    padding: 4px 7px 2px 7px;
+    padding: 4px 7px 3px 7px;
     top: calc(3rem + 2vw);
     left: 25px;
     z-index: 10;
@@ -388,7 +388,7 @@ header .kr::after {
 .title1::after {
     content: '';
     display: inline-block;
-    width: 10px;
+    width: 7px;
 }
 .exbInfo .ml-en,
 .exbInfo .ml-num {
@@ -457,11 +457,14 @@ header .ml-num,
 }
 @media screen and (max-width: 520px) {
     .container {
-        padding: 11px 14px;
+        padding: 10px 11px;
     }
     .graphic > img {
         height: 80%;
         max-height: 100vw;
+    }
+    .logo {
+        display: none;
     }
     .onmobile {
         display: block;
@@ -474,9 +477,15 @@ header .ml-num,
         padding: 1px 4px;
         width: 3.3rem;
     }
+    #about {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
     .info {
         padding: 3px 4px;
-        margin-left: 6px;
+        margin-left: 0;
+        margin-right: 6px;
     }
     .modal {
         /*top: calc(1.9rem + 3vw);*/
