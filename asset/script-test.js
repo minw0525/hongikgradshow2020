@@ -357,7 +357,7 @@ let delay = 100; // delay after event is "complete" to run callback
             else
             curPosIdx = 2; 
             //console.log('resizing')
-            console.log(`deptIdx : ${deptIdx}, curPosIdx : ${curPosIdx}`)
+            //console.log(`deptIdx : ${deptIdx}, curPosIdx : ${curPosIdx}`)
             for (const el of graphicDOM){
                 const i = graphicDOM.indexOf(el);
                 const $el = $(el);
@@ -374,14 +374,15 @@ function preload(i, arr, source) {
         arr[i] = new Image();
         arr[i].src = `${source}${i}.png`;
 }
-for(let i = 0; i<deptList.length; i++){
+
+(()=>{for(let i = 0; i<deptList.length; i++){
     let tempArr = [];
     images.push(tempArr)
     for(let k = 0; k<5; k++){
         preload(k, tempArr, deptList[i].source)   
     }
-}
-
+} 
+})()
 
 //user event 
 
@@ -445,12 +446,12 @@ async function deptActive(j){
         })
         //el.style.visibility = 'visible';
         //el.style.opacity = 1;
-        console.log('deptActived')
+        //console.log('deptActived')
     }
 }
 function setImageSrc(el, i, deptIdx, curPosIdx){
-     console.log(`i=${i}, deptIdx=${deptIdx}, curPosIdx=${curPosIdx}`)
-     console.log(deptList[deptIdx].mobileImageNum)
+     //console.log(`i=${i}, deptIdx=${deptIdx}, curPosIdx=${curPosIdx}`)
+     //console.log(deptList[deptIdx].mobileImageNum)
     if(curPosIdx > 1){
         if (i>=deptList[deptIdx].mobileImageNum) {
             el.attr('src', 'source/placeholder.png');
@@ -458,10 +459,10 @@ function setImageSrc(el, i, deptIdx, curPosIdx){
         }
         el.attr('src', images[deptIdx][i].src);
     }else{
-        console.log(images[deptIdx])
+        //console.log(images[deptIdx])
         el.attr('src', images[deptIdx][i].src);
     }
-    console.log('image src')
+    //console.log('image src')
 }
 
 function setImagePosition(el, i, deptIdx, curPosIdx){
@@ -481,14 +482,14 @@ $('button').click(function(){
     this.children[0].classList.toggle('clickedBtn')
 })
 $('body').click((e)=>{
-    if(e.target !== $('button')[0] && e.target !== modal[0]){
+    if(e.target !== $('button')[0] && e.target !== modal[0] && e.target !== $('.modal-wrapper')[0] && e.target !== $('.close')[0]){
         modal.css('display', 'none')
     }        
 })
-$('.close').click((e)=>{
+$('.close>div').click((e)=>{
     if(modal.css('display') === 'block'){
         modal.css('display','none');
         document.getElementById('about').children[0].classList.toggle('clickedBtn');
-        console.log('toggled');           
+        //console.log('toggled');           
     }
 })
