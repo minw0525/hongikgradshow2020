@@ -26,8 +26,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 30vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 24vw)', 'calc(47*var(--vh) - 14vw)'],
             posL :['15vw', '19vw', '19vw', '35vw', '40vw']
         },{        //16:9 ratio width=100%...pad
-            posT :['calc(47*var(--vh) - 35vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 29vw)', 'calc(47*var(--vh) - 19vw)'],
-            posL :['11vw', '17vw', '17vw', '33vw', '38vw']
+            posT :['calc(47*var(--vh) - 45vw)', 'calc(47*var(--vh) - 25.5vw)', 'calc(47*var(--vh) - 25.5vw)', 'calc(47*var(--vh) - 37vw)', 'calc(47*var(--vh) - 17vw)'],
+            posL :['2vw', '9vw', '8vw', '29vw', '31vw']
         },{        //9:21 ratio width=100%...mobile
             posT :['calc(50*var(--vh) - 105vw)', 'calc(50*var(--vh) - 66vw)', 'calc(50*var(--vh) - 45vw)', 'calc(50*var(--vh) - 92vw)', 'null'],
             posL :['-16vw;', '-5vw', '-5vw', '-5vw', 'null']
@@ -47,8 +47,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 14vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 20.5vw)'],
             posL :['10vw', '33.5vw', '18.5vw', '46.5vw', '32.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 13vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 22.5vw)'],
+            posL :['2vw', '28.5vw', '8.5vw', '38.5vw', '24.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 71vw)', 'calc(50*var(--vh) - 43vw)', 'calc(50*var(--vh) - 50vw)', 'null', 'null'],
             posL :['-13vw', '1vw', '-28vw', 'null', 'null']
@@ -69,8 +69,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 21.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 11.5vw)'],
             posL :['13.5vw', '45.5vw', '39.5vw', '13.5vw', '24.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 8.5vw)'],
+            posL :['0.5vw', '37.5vw', '30.5vw', '2.5vw', '17.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 105vw)', 'calc(50*var(--vh) - 62vw)', 'calc(50*var(--vh) - 50vw)', 'calc(50*var(--vh) - 40vw)', 'null'],
             posL :['3vw', '3vw', '-7vw', '-35vw', 'null']
@@ -92,8 +92,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 30.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
             posL :['18.5vw', '38.5vw', '27.5vw', '43.5vw', '25.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 33.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 37.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
+            posL :['5.5vw', '26.5vw', '14.5vw', '31.5vw', '11.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 95vw)', 'calc(50*var(--vh) - 49vw)', 'calc(50*var(--vh) - 37vw)', 'calc(50*var(--vh) - 56vw)', 'null'],
             posL :['-10vw', '-8vw', '-6vw', '-10vw', 'null']
@@ -115,8 +115,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 19.5vw)', 'calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 12.5vw)', 'calc(47*var(--vh) - 19.5vw)'],
             posL :['39.5vw', '8.5vw', '26.5vw', '19.5vw', '33.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 39.5vw)', 'calc(47*var(--vh) - 12.5vw)', 'calc(47*var(--vh) - 19.5vw)'],
+            posL :['32.5vw', '-6.5vw', '12.5vw', '9.5vw', '25.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 30vw)', 'calc(50*var(--vh) - 53vw)', 'calc(50*var(--vh) - 86vw)', 'calc(50*var(--vh) - 32vw)', 'null'],
             posL :['-2vw', '-26vw', '0vw', '-4vw', 'null']
@@ -138,8 +138,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 16.5vw)'],
             posL :['14.5vw', '37.5vw', '15.5vw', '31.5vw', '47.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 33.5vw)', 'calc(47*var(--vh) - 39.5vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 16.5vw)'],
+            posL :['0.5vw', '27.5vw', '9.5vw', '25.5vw', '42.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 67vw)', 'calc(50*var(--vh) - 92vw)', 'calc(50*var(--vh) - 37vw)', 'null', 'null'],
             posL :['-16vw', '5vw', '-10vw', 'null', 'null']
@@ -161,8 +161,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 23.5vw)', 'calc(47*var(--vh) - 14.5vw)', 'calc(47*var(--vh) - 30.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 14.5vw)'],
             posL :['15.5vw', '14.5vw', '42.5vw', '38.5vw', '28.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 33.5vw)', 'calc(47*var(--vh) - 14.5vw)', 'calc(47*var(--vh) - 38.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 10.5vw)'],
+            posL :['3.5vw', '4.5vw', '35.5vw', '30.5vw', '25.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 38vw)', 'calc(50*var(--vh) - 51vw)', 'calc(50*var(--vh) - 90vw)', 'calc(50*var(--vh) - 74vw)', 'null'],
             posL :['-28vw', '-1vw', '10vw', '-2vw', 'null']
@@ -184,8 +184,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 8.5vw)', 'calc(47*var(--vh) - 21.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 21.5vw)'],
             posL :['51.5vw', '30.5vw', '26.5vw', '13.5vw', '33.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 8.5vw)', 'calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 21.5vw)'],
+            posL :['37.5vw', '20.5vw', '18.5vw', '5.5vw', '28.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 25vw)', 'calc(50*var(--vh) - 63vw)', 'calc(50*var(--vh) - 75vw)', 'calc(50*var(--vh) - 60vw)', 'null'],
             posL :['-19vw', '-10vw', '-10vw', '-10vw', 'null']
@@ -207,8 +207,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 19.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 13.5vw)'],
             posL :['24.5vw', '15.5vw', '21.5vw', '34.5vw', '45.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 22.5vw)'],
+            posL :['14.5vw', '5.5vw', '14.5vw', '29.5vw', '42.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 70vw)', 'calc(50*var(--vh) - 53vw)', 'calc(50*var(--vh) - 67vw)', 'null', 'null'],
             posL :['-10vw', '-10vw', '-10vw', 'null', 'null']
@@ -230,8 +230,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
             posL :['34.5vw', '29.5vw', '30.5vw', '14.5vw', '43.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
+            posL :['17.5vw', '16.5vw', '22.5vw', '6.5vw', '33.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 57vw)', 'calc(50*var(--vh) - 82vw)', 'calc(50*var(--vh) - 75vw)', 'null', 'null'],
             posL :['-11vw', '-16vw', '-8vw', 'null', 'null']
@@ -253,8 +253,8 @@ const deptList = [
             posT :['calc(47*var(--vh) - 19.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 26.5vw)'],
             posL :['44.5vw', '34.5vw', '13.5vw', '7.5vw', '27.5vw']
         },{        //16:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '-20%', '10%'],
-            posL :['-15%', '-8%', '-10%', '20%', '20%']
+            posT :['calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 13.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 33.5vw)'],
+            posL :['32.5vw', '22.5vw', '-0.5vw', '-2.5vw', '19.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 63vw)', 'calc(50*var(--vh) - 53vw)', 'calc(50*var(--vh) - 30vw)', 'calc(50*var(--vh) - 90vw)', 'null'],
             posL :['-16vw', '-10vw', '-10vw', '9vw', 'null']
@@ -350,7 +350,7 @@ let delay = 100; // delay after event is "complete" to run callback
             await setGeoVars()
             .then(calculate)
             setRootCss()
-            if (window.innerHeight / window.innerWidth < 0.98 && window.innerWidth > 520 )
+            if (window.innerHeight / window.innerWidth < 0.98 && window.innerWidth > 768 )
             curPosIdx = 0; 
             else  if (window.innerHeight / window.innerWidth < 1.9 && window.innerWidth > 520)
             curPosIdx = 1; 
@@ -407,8 +407,7 @@ $.each($('li.dept'), (j, el)=>{
             if (!deptList[j].title2) {$('.title2').css('display','none')}
             else($('.title2').html(`<br class="onmobile">${deptList[j].title2}`).css('display','inline'))
             $('.link').attr('href', deptList[j].link)
-            exbInfo.multilingual(['en'])
-
+            exbInfo.multilingual(['num','punct','en'])
             deptIdx = j;
             deptActive(j)
         }
