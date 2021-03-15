@@ -398,6 +398,12 @@ header .kr::after {
 .title1 .ml-num {
     font-style: normal;
 }
+footer .ml-en,
+footer .ml-num,
+.modal .ml-en,
+.modal .ml-num {
+    font-family: 'Jost', sans-serif;
+}
 header .ml-en,
 header .ml-num,
 .tooltip .ml-en,
@@ -409,12 +415,6 @@ header .ml-num,
     font-family: 'EB Garamond', 'Noto Serif KR', serif;
     position: relative;
     top: -0.04em;
-}
-footer .ml-en,
-footer .ml-num,
-.modal .ml-en,
-.modal .ml-num {
-    font-family: 'Jost', sans-serif;
 }
 @keyframes up-down {
     0% {
