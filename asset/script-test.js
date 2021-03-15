@@ -26,8 +26,6 @@ const deptList = [
             posT :['calc(47*var(--vh) - 30vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 24vw)', 'calc(47*var(--vh) - 14vw)'],
             posL :['15vw', '19vw', '19vw', '35vw', '40vw']
         },{        //16:9 ratio width=100%...pad
-//            posT :['calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 22.5vw)'],
-//            posL :['35%', '42%', '40%', '50%', '60%']
             posT :['calc(47*var(--vh) - 35vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 29vw)', 'calc(47*var(--vh) - 19vw)'],
             posL :['11vw', '17vw', '17vw', '33vw', '38vw']
         },{        //9:21 ratio width=100%...mobile

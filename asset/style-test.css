@@ -8,7 +8,7 @@ font-family: 'Noto Serif KR', serif;*/
     --vh: 1vh;
     --min_gap: 15px;
     /*font*/
-    --font_h1: 500 calc(0.85rem + 1vw) / calc(1rem + 1.8vw) 'Noto Serif KR',
+    --font_h1: 500 calc(0.85rem + 1vw) / calc(1rem + 1.4vw) 'Noto Serif KR',
         serif;
     --font_mid: 400 calc(0.7rem + 1.5vw) / calc(1rem + 2.4vw) 'Noto Sans KR',
         sans-serif;
@@ -357,8 +357,7 @@ hr {
 header .kr::after {
     content: '';
     display: inline-block;
-    width: 15px;
-    margin: 10px;
+    width: 10px;
 }
 .onmobile {
     display: none;
@@ -372,7 +371,7 @@ header .kr::after {
     transition: background-color 0.3s;
     font: var(--font_h1);
     width: fit-content;
-    padding: 0 10px;
+    padding: 0 10px 3px 10px;
     top: calc(3rem + 2vw);
     left: 25px;
     z-index: 10;
@@ -387,12 +386,11 @@ header .kr::after {
 .title2 {
     margin-left: calc(0.5rem + 0.5vw);
 }
-#about .ml-en,
+header .ml-en,
 .tooltip .ml-en,
 .close .ml-en,
-.en .ml-en,
 .dept .ml-en {
-    font-family: 'EB Garamond', serif;
+    font-family: 'EB Garamond', 'Noto Serif KR', serif;
 }
 @keyframes up-down {
     0% {
