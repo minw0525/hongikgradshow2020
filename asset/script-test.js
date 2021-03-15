@@ -468,7 +468,7 @@ function setImagePosition(el, i, deptIdx, curPosIdx){
         top: deptList[deptIdx].pos[curPosIdx].posT[i],
         left: deptList[deptIdx].pos[curPosIdx].posL[i],
     })
-    console.log('image positioned')
+    //console.log('image positioned')
 }
 //about btn click
 $('button').click(function(){
