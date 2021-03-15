@@ -20,13 +20,17 @@ const deptList = [
         Y : '100px',
         source : `./source/tafd/textile_`,
         color: '#D090FF',
-        pos: [{    // 21:9 ratio width=100%
-            posT :['-25%', '0%', '4%', '10%', '10%'],
-            posL :['35%', '42%', '40%', '50%', '60%']
-        },{        //16:9 ratio width=100%
-            posT :['-17%', '7%', '11%', '-13%', '17%'],
-            posL :['35%', '42%', '40%', '50%', '60%']
-        },{        //9:21 ratio width=100%
+        pos: [{    // 21:9 ratio width=100%...desktop
+//            posT :['-5%', '20%', '24%', '30%', '30%'],
+//            posL :['15%', '22%', '20%', '35%', '40%']
+            posT :['calc(47*var(--vh) - 30vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 24vw)', 'calc(47*var(--vh) - 14vw)'],
+            posL :['15vw', '19vw', '19vw', '35vw', '40vw']
+        },{        //16:9 ratio width=100%...pad
+//            posT :['calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 22.5vw)'],
+//            posL :['35%', '42%', '40%', '50%', '60%']
+            posT :['calc(47*var(--vh) - 35vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 29vw)', 'calc(47*var(--vh) - 19vw)'],
+            posL :['11vw', '17vw', '17vw', '33vw', '38vw']
+        },{        //9:21 ratio width=100%...mobile
             posT :['calc(50*var(--vh) - 105vw)', 'calc(50*var(--vh) - 66vw)', 'calc(50*var(--vh) - 45vw)', 'calc(50*var(--vh) - 92vw)', 'null'],
             posL :['-16vw;', '-5vw', '-5vw', '-5vw', 'null']
         }],
@@ -42,8 +46,8 @@ const deptList = [
         Y : '100px',
         source : `./source/sculpt/sculpture_`,
         pos: [{
-            posT :['-8%', '-2%', '10%', '-8%', '17%'],
-            posL :['10%', '8%', '-10%', '-18%', '27%']
+            posT :['calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 14vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 20.5vw)'],
+            posL :['10vw', '33.5vw', '18.5vw', '46.5vw', '32.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -64,8 +68,8 @@ const deptList = [
         Y : '100px',
         source : `./source/op/oriental_`,
         pos: [{
-            posT :['16%', '-8%', '-2%', '-7%', '-16%'],
-            posL :['-3%', '29%', '20%', '-21%', '-20%']
+            posT :['calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 21.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 11.5vw)'],
+            posL :['13.5vw', '45.5vw', '39.5vw', '13.5vw', '24.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -87,8 +91,8 @@ const deptList = [
         Y : '100px',
         source : `./source/id/industrial_`,
         pos: [{
-            posT :['7%', '5%', '-23%', '18%', '-18%'],
-            posL :['-5%', '10%', '-3%', '18%', '-2%']
+            posT :['calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 30.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
+            posL :['18.5vw', '38.5vw', '27.5vw', '43.5vw', '25.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -110,8 +114,8 @@ const deptList = [
         Y : '100px',
         source : `./source/vcd/viscom_`,
         pos: [{
-            posT :['-2%', '8%', '-19%', '16%', '-10%'],
-            posL :['16%', '-15%', '0%', '19%', '-30%']
+            posT :['calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 19.5vw)', 'calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 12.5vw)', 'calc(47*var(--vh) - 19.5vw)'],
+            posL :['39.5vw', '8.5vw', '26.5vw', '19.5vw', '33.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -133,8 +137,8 @@ const deptList = [
         Y : '100px',
         source : `./source/c&g/ceramic_`,
         pos: [{
-            posT :['-8%', '-28%', '10%', '15%', '7%'],
-            posL :['-15%', '15%', '9%', '-14%', '29%']
+            posT :['calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 16.5vw)'],
+            posL :['14.5vw', '37.5vw', '15.5vw', '31.5vw', '47.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -156,8 +160,8 @@ const deptList = [
         Y : '100px',
         source : `./source/paint/painting_`,
         pos: [{
-            posT :['-10%', '10%', '1%', '-28%', '11%'],
-            posL :['-15%', '-17%', '20%', '25%', '7%']
+            posT :['calc(47*var(--vh) - 23.5vw)', 'calc(47*var(--vh) - 14.5vw)', 'calc(47*var(--vh) - 30.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 14.5vw)'],
+            posL :['15.5vw', '14.5vw', '42.5vw', '38.5vw', '28.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -179,8 +183,8 @@ const deptList = [
         Y : '100px',
         source : `./source/print/printmaking_`,
         pos: [{
-            posT :['-4%', '-6%', '2%', '22%', '0%'],
-            posL :['6%', '0%', '-1%', '30%', '-18%']
+            posT :['calc(47*var(--vh) - 8.5vw)', 'calc(47*var(--vh) - 21.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 21.5vw)'],
+            posL :['51.5vw', '30.5vw', '26.5vw', '13.5vw', '33.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -202,8 +206,8 @@ const deptList = [
         Y : '100px',
         source : `./source/w&f/woodwork_`,
         pos: [{
-            posT :['11%', '-3%', '8%', '-1%', '-3%'],
-            posL :['26%', '-4%', '9%', '-15%', '1%']
+            posT :['calc(47*var(--vh) - 19.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 13.5vw)'],
+            posL :['24.5vw', '15.5vw', '21.5vw', '34.5vw', '45.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -225,8 +229,8 @@ const deptList = [
         Y : '100px',
         source : `./source/mad/metal_`,
         pos: [{
-            posT :['2%', '-12%', '-8%', '2%', '-4%'],
-            posL :['9%', '27%', '-17%', '4%', '0%']
+            posT :['calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
+            posL :['34.5vw', '29.5vw', '30.5vw', '14.5vw', '43.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -248,8 +252,8 @@ const deptList = [
         Y : '100px',
         source : `./source/art/artstudies_`,
         pos: [{
-            posT :['-12%', '6%', '18%', '-4%', '-2%'],
-            posL :['0%', '13%', '-26%', '-28%', '28%']
+            posT :['calc(47*var(--vh) - 19.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 26.5vw)'],
+            posL :['44.5vw', '34.5vw', '13.5vw', '7.5vw', '27.5vw']
         },{        //16:9 ratio width=100%
             posT :['-25%', '0%', '4%', '-20%', '10%'],
             posL :['-15%', '-8%', '-10%', '20%', '20%']
@@ -348,9 +352,9 @@ let delay = 100; // delay after event is "complete" to run callback
             await setGeoVars()
             .then(calculate)
             setRootCss()
-            if (window.innerHeight / window.innerWidth < 0.98 && window.innerWidth > 480 )
+            if (window.innerHeight / window.innerWidth < 0.98 && window.innerWidth > 520 )
             curPosIdx = 0; 
-            else  if (window.innerHeight / window.innerWidth < 1.8 && window.innerWidth > 480)
+            else  if (window.innerHeight / window.innerWidth < 1.9 && window.innerWidth > 520)
             curPosIdx = 1; 
             else
             curPosIdx = 2; 
