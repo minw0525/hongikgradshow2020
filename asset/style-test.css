@@ -215,6 +215,7 @@ li.dept:nth-child(11) {
 }
 .graphic > img {
     position: absolute;
+    visibility: hidden;
     min-width: 300px;
     /*width: 100%;*/
     height: 100%;
@@ -307,8 +308,7 @@ hr {
     z-index: 5000;
     -webkit-transform: translate3d(0, 0, 3000px);
 }
-.modal .ml-en,
-.modal .ml-num {
+.modal :is(.ml-en, .ml-num) {
     line-height: calc(0.63rem + 0.7vw);
 }
 .modal hr {
@@ -401,27 +401,16 @@ header .kr::after {
     display: inline-block;
     width: 7px;
 }
-.exbInfo .ml-en,
-.exbInfo .ml-num {
+.exbInfo :is(.ml-en, .ml-num) {
     font-style: italic;
 }
 .title1 .ml-num {
     font-style: normal;
 }
-footer .ml-en,
-footer .ml-num,
-.modal .ml-en,
-.modal .ml-num {
+:is(footer, .modal) :is(.ml-en, .ml-num) {
     font-family: 'Jost', sans-serif;
 }
-header .ml-en,
-header .ml-num,
-.tooltip .ml-en,
-.tooltip .ml-num,
-.close .ml-en,
-.close .ml-num,
-.dept .ml-en,
-.dept .ml-num {
+:is(header, .tooltip, .close, .dept) :is(.ml-en, .ml-num) {
     font-family: 'EB Garamond', 'Noto Serif KR', serif;
     position: relative;
     top: -0.04em;

@@ -1,3 +1,4 @@
+let isMobile = window.innerWidth < 500 ? true : false //0: moble, 1= web
 let root = document.documentElement;
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -29,10 +30,9 @@ const deptList = [
             posT :['calc(47*var(--vh) - 45vw)', 'calc(47*var(--vh) - 25.5vw)', 'calc(47*var(--vh) - 25.5vw)', 'calc(47*var(--vh) - 37vw)', 'calc(47*var(--vh) - 17vw)'],
             posL :['2vw', '9vw', '8vw', '29vw', '31vw']
         },{        //9:21 ratio width=100%...mobile
-            posT :['calc(50*var(--vh) - 105vw)', 'calc(50*var(--vh) - 66vw)', 'calc(50*var(--vh) - 45vw)', 'calc(50*var(--vh) - 92vw)', 'null'],
-            posL :['-16vw;', '-5vw', '-5vw', '-5vw', 'null']
+            posT :['calc(50*var(--vh) - 90vw)', 'calc(50*var(--vh) - 50vw)', 'calc(50*var(--vh) - 32vw)', 'calc(50*var(--vh) - 97vw)', 'null'],
+            posL :['-7vw;', '-1.5vw', '-4.5vw', '-20vw', 'null']
         }],
-        mobileImageNum: 4
     },
     {
         idx: 1, 
@@ -50,11 +50,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 13vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 22.5vw)'],
             posL :['2vw', '28.5vw', '8.5vw', '38.5vw', '24.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 71vw)', 'calc(50*var(--vh) - 43vw)', 'calc(50*var(--vh) - 50vw)', 'null', 'null'],
-            posL :['-13vw', '1vw', '-28vw', 'null', 'null']
+            posT :['calc(50*var(--vh) - 70vw)', 'calc(50*var(--vh) - 76vw)', 'calc(50*var(--vh) - 10vw)', 'calc(50*var(--vh) - 30vw)', 'null'],
+            posL :['-17vw', '-2vw', '9vw', '-21vw', 'null']
         }],    
         color: '#D2BEFF',
-        mobileImageNum: 3
     },
     {
         idx: 2, 
@@ -72,11 +71,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 8.5vw)'],
             posL :['0.5vw', '37.5vw', '30.5vw', '2.5vw', '17.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 105vw)', 'calc(50*var(--vh) - 62vw)', 'calc(50*var(--vh) - 50vw)', 'calc(50*var(--vh) - 40vw)', 'null'],
-            posL :['3vw', '3vw', '-7vw', '-35vw', 'null']
+            posT :['calc(50*var(--vh) - 101vw)', 'calc(50*var(--vh) - 59vw)', 'calc(50*var(--vh) - 24vw)', 'calc(50*var(--vh) - 36vw)', 'null'],
+            posL :['6vw', '-1vw', '-7vw', '12vw', 'null']
         }],
         color: '#84B4FF',
-        mobileImageNum: 4
 
     },
     {
@@ -95,11 +93,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 33.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 37.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
             posL :['5.5vw', '26.5vw', '14.5vw', '31.5vw', '11.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 95vw)', 'calc(50*var(--vh) - 49vw)', 'calc(50*var(--vh) - 37vw)', 'calc(50*var(--vh) - 56vw)', 'null'],
-            posL :['-10vw', '-8vw', '-6vw', '-10vw', 'null']
+            posT :['calc(50*var(--vh) - 75vw)', 'calc(50*var(--vh) - 49vw)', 'calc(50*var(--vh) - 78vw)', 'calc(50*var(--vh) - 10vw)', 'null'],
+            posL :['-2vw', '-20vw', '6vw', '2vw', 'null']
         }],
         color: '#FF7C7C',
-        mobileImageNum: 4
 
     },
     {
@@ -118,11 +115,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 39.5vw)', 'calc(47*var(--vh) - 12.5vw)', 'calc(47*var(--vh) - 19.5vw)'],
             posL :['32.5vw', '-6.5vw', '12.5vw', '9.5vw', '25.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 30vw)', 'calc(50*var(--vh) - 53vw)', 'calc(50*var(--vh) - 86vw)', 'calc(50*var(--vh) - 32vw)', 'null'],
-            posL :['-2vw', '-26vw', '0vw', '-4vw', 'null']
+            posT :['calc(50*var(--vh) - 27vw)', 'calc(50*var(--vh) - 83vw)', 'calc(50*var(--vh) - 13vw)', 'calc(50*var(--vh) - 49vw)', 'null'],
+            posL :['-28vw', '-1vw', '-3vw', '2vw', 'null']
         }],
         color: '#FFFE48',
-        mobileImageNum: 4
 
     },
     {
@@ -141,11 +137,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 33.5vw)', 'calc(47*var(--vh) - 39.5vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 16.5vw)'],
             posL :['0.5vw', '27.5vw', '9.5vw', '25.5vw', '42.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 67vw)', 'calc(50*var(--vh) - 92vw)', 'calc(50*var(--vh) - 37vw)', 'null', 'null'],
-            posL :['-16vw', '5vw', '-10vw', 'null', 'null']
+            posT :['calc(50*var(--vh) - 91vw)', 'calc(50*var(--vh) - 59vw)', 'calc(50*var(--vh) - 30vw)', 'calc(50*var(--vh) - 70vw)', 'null'],
+            posL :['14vw', '-17vw', '-4vw', '18vw', 'null']
         }],
         color: '#FFB33B',
-        mobileImageNum: 3
 
     },
     {
@@ -164,11 +159,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 33.5vw)', 'calc(47*var(--vh) - 14.5vw)', 'calc(47*var(--vh) - 38.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 10.5vw)'],
             posL :['3.5vw', '4.5vw', '35.5vw', '30.5vw', '25.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 38vw)', 'calc(50*var(--vh) - 51vw)', 'calc(50*var(--vh) - 90vw)', 'calc(50*var(--vh) - 74vw)', 'null'],
-            posL :['-28vw', '-1vw', '10vw', '-2vw', 'null']
+            posT :['calc(50*var(--vh) - 8vw)', 'calc(50*var(--vh) - 30vw)', 'calc(50*var(--vh) - 88vw)', 'calc(50*var(--vh) - 65vw)', 'null'],
+            posL :['16vw', '-21vw', '10vw', '-2vw', 'null']
         }],
         color: '#8EFFFF',
-        mobileImageNum: 4
 
     },
     {
@@ -187,11 +181,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 8.5vw)', 'calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 21.5vw)'],
             posL :['37.5vw', '20.5vw', '18.5vw', '5.5vw', '28.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 25vw)', 'calc(50*var(--vh) - 63vw)', 'calc(50*var(--vh) - 75vw)', 'calc(50*var(--vh) - 60vw)', 'null'],
-            posL :['-19vw', '-10vw', '-10vw', '-10vw', 'null']
+            posT :['calc(50*var(--vh) - 5vw)', 'calc(50*var(--vh) - 43vw)', 'calc(50*var(--vh) - 91vw)', 'calc(50*var(--vh) - 58vw)', 'null'],
+            posL :['-6vw', '-2vw', '3vw', '6vw', 'null']
         }],
         color: '#74FFA4',
-        mobileImageNum: 4
 
     },
     {
@@ -210,11 +203,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 22.5vw)'],
             posL :['14.5vw', '5.5vw', '14.5vw', '29.5vw', '42.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 70vw)', 'calc(50*var(--vh) - 53vw)', 'calc(50*var(--vh) - 67vw)', 'null', 'null'],
-            posL :['-10vw', '-10vw', '-10vw', 'null', 'null']
+            posT :['calc(50*var(--vh) - 36vw)', 'calc(50*var(--vh) - 84vw)', 'calc(50*var(--vh) - 24vw)', 'calc(50*var(--vh) - 48vw)', 'null'],
+            posL :['-1vw', '-4vw', '-3vw', '12vw', 'null']
         }],
         color: '#95FE17',
-        mobileImageNum: 3
 
     },
     {
@@ -233,11 +225,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
             posL :['17.5vw', '16.5vw', '22.5vw', '6.5vw', '33.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 57vw)', 'calc(50*var(--vh) - 82vw)', 'calc(50*var(--vh) - 75vw)', 'null', 'null'],
-            posL :['-11vw', '-16vw', '-8vw', 'null', 'null']
+            posT :['calc(50*var(--vh) - 91vw)', 'calc(50*var(--vh) - 72vw)', 'calc(50*var(--vh) - 19vw)', 'calc(50*var(--vh) - 46vw)', 'null'],
+            posL :['-8vw', '-3vw', '5vw', '0vw', 'null']
         }],
         color: '#DBF705',
-        mobileImageNum: 3
 
     },
     {
@@ -256,11 +247,10 @@ const deptList = [
             posT :['calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 13.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 33.5vw)'],
             posL :['32.5vw', '22.5vw', '-0.5vw', '-2.5vw', '19.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 63vw)', 'calc(50*var(--vh) - 53vw)', 'calc(50*var(--vh) - 30vw)', 'calc(50*var(--vh) - 90vw)', 'null'],
-            posL :['-16vw', '-10vw', '-10vw', '9vw', 'null']
+            posT :['calc(50*var(--vh) - 79vw)', 'calc(50*var(--vh) - 17vw)', 'calc(50*var(--vh) - 54vw)', 'calc(50*var(--vh) - 50vw)', 'null'],
+            posL :['9vw', '-3vw', '-3vw', '-22vw', 'null']
         }],
         color: '#FFACFC',
-        mobileImageNum: 4
 
   }
 ];
@@ -296,15 +286,17 @@ let deptIdx, mainWidth, mainHeight, theta, xDeg, yDeg, ellipseAngleRad, ellipseR
 // handle event
 //['load','optimizedResize'].forEach( evt => 
 function setGeoVars(){
-    vh = window.innerHeight * 0.01;
-    root.style.setProperty('--vh', `${vh}px`);
-    mainWidth = $('main').width();
-    mainHeight = $('main').height();
     //console.log('width: '+mainWidth, 'height: '+mainHeight) 
-    return new Promise(res => res(mainHeight / mainWidth));
+    return new Promise(res => {
+        vh = window.innerHeight * 0.01;
+        root.style.setProperty('--vh', `${vh}px`);
+        mainWidth = $('main').width();
+        mainHeight = $('main').height();
+        res(mainHeight / mainWidth)
+    });
 }
 
-async function calculate(ratio){
+function calculate(ratio){
     //ratio = mainHeight / mainWidth;
     //console.log(ratio)
     if (ratio < 0.4) {
@@ -326,7 +318,7 @@ async function calculate(ratio){
     //console.log(ellipseAngleRad, theta)
     ellipseRadius = (ellipseAngleRad >= theta) ?  Math.sqrt(Math.pow(mainHeight/2,2) + Math.pow(mainHeight / (2 * Math.tan(ellipseAngleRad)),2)) -8*vh :  Math.sqrt(Math.pow(mainWidth/2,2) + Math.pow(mainWidth * Math.tan(ellipseAngleRad)/ 2, 2)) -8*vh; //빗변
 }
-async function setRootCss(){
+function setRootCss(){
     //console.log('set css')
 
     $(root).css({
@@ -340,9 +332,9 @@ async function setRootCss(){
 let timeout = false; // holder for timeout id
 let delay = 100; // delay after event is "complete" to run callback
 
-['load','resize'].forEach( evt => 
+['DOMContentLoaded','resize'].forEach( evt => 
     window.addEventListener(evt, function() {
-        if (evt === 'load'){
+        if (evt === 'DOMContentLoaded'){
             deptIdx = Math.floor(Math.random()*11)
         }
         clearTimeout(timeout);
@@ -370,24 +362,35 @@ let delay = 100; // delay after event is "complete" to run callback
 
 //preload images
 let images = [];
-function preload(i, arr, source) {
-        arr[i] = new Image();
-        arr[i].src = `${source}${i}.png`;
+let downloadQueue =  isMobile ? [[1, 'mobile_', 4], [0, '', 5]] : [[0,'',5],[1, 'mobile_',4]]
+
+function preload(arr, idx,  source) {
+    return new Promise((res, rej)=>{
+        for(let k = 0; k<idx[2]; k++){
+            arr[idx[0]][k] = new Image();
+            arr[idx[0]][k].src = `${source}${k}.png`;
+        }  
+        res('')    
+    })
 }
 
-(()=>{for(let i = 0; i<deptList.length; i++){
-    let tempArr = [];
-    images.push(tempArr)
-    for(let k = 0; k<5; k++){
-        preload(k, tempArr, deptList[i].source)   
+(async ()=>{
+    for(let i = 0; i<deptList.length; i++){
+        let tempArr = [[],[]];
+        images.push(tempArr)
+        //mobile image  = tempArr[1]
+        //web image  = tempArr[0]
+        preload(tempArr, downloadQueue[0], deptList[i].source+downloadQueue[0][1])
+        .then(()=>{
+            preload(tempArr, downloadQueue[1], deptList[i].source+downloadQueue[1][1]) 
+        })
     }
-} 
 })()
 
 //user event 
 
 //graphic image change
-window.addEventListener('load', async ()=>{
+window.addEventListener('DOMContentLoaded', async ()=>{
     await initialDelay();
     deptActive(deptIdx)
 })
@@ -396,7 +399,10 @@ window.addEventListener('load', async ()=>{
 //dept mouse over event
 $.each($('li.dept'), (j, el)=>{
     $(el).mouseenter(async (evt)=>{
-        if(!el.classList.contains('activeDept')){
+        //console.log(j)
+        //console.log(deptIdx)
+    
+        if(!el.classList.contains('activeDept') && j !== deptIdx){
 
             //dept highlight/blur
             el.classList.add('activeDept');
@@ -453,14 +459,14 @@ function setImageSrc(el, i, deptIdx, curPosIdx){
      //console.log(`i=${i}, deptIdx=${deptIdx}, curPosIdx=${curPosIdx}`)
      //console.log(deptList[deptIdx].mobileImageNum)
     if(curPosIdx > 1){
-        if (i>=deptList[deptIdx].mobileImageNum) {
+        if (i>=4) {
             el.attr('src', 'source/placeholder.png');
             return;
         }
-        el.attr('src', images[deptIdx][i].src);
+        el.attr('src', images[deptIdx][1][i].src);
     }else{
         //console.log(images[deptIdx])
-        el.attr('src', images[deptIdx][i].src);
+        el.attr('src', images[deptIdx][0][i].src);
     }
     //console.log('image src')
 }
