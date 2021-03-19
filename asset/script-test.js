@@ -245,7 +245,8 @@ const deptList = [
             posL :['44.5vw', '34.5vw', '13.5vw', '7.5vw', '27.5vw']
         },{        //16:9 ratio width=100%
             posT :['calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 13.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 33.5vw)'],
-            posL :['32.5vw', '22.5vw', '-0.5vw', '-2.5vw', '19.5vw']
+            posL :['calc(36vw + 19.5vw - 8rem)', 'calc(36vw + 4vw - 8rem)', 'calc(36vw - 9vw - 8rem)', 'calc(36vw - 22vw - 8rem)', 'calc(36vw - 1vw - 8rem)']
+            //'32.5vw', '22.5vw', '-0.5vw', '-2.5vw', '19.5vw'
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 79vw)', 'calc(50*var(--vh) - 17vw)', 'calc(50*var(--vh) - 54vw)', 'calc(50*var(--vh) - 50vw)', 'null'],
             posL :['9vw', '-3vw', '-3vw', '-22vw', 'null']
@@ -386,6 +387,8 @@ function preload(arr, idx,  source) {
         })
     }
 })()
+
+
 
 //user event 
 
