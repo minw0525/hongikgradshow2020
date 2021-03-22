@@ -26,6 +26,9 @@ font-family: 'Noto Serif KR', serif;*/
     --orbit-narrow: rotateX(-120deg) rotateY(50deg) rotateZ(-30deg);*/
     --offset: -45vw;
     --zAngle: 0deg;
+    /*exbinfo position*/
+    --exbInfoT: ;
+    --exbInfoL: ;
 }
 * {
     word-break: keep-all;
@@ -60,6 +63,10 @@ header {
     white-space: nowrap;
     line-height: 1.4;
     justify-content: space-between;
+    z-index: 3000;
+}
+header a {
+    text-decoration: none;
 }
 h1 {
     font: var(--font_h1);
@@ -127,7 +134,7 @@ li.dept {
     filter: blur(0) !important;
 }
 li.dept:hover {
-    cursor: pointer;
+    cursor: default;
 }
 li.dept:nth-child(1) {
     transform: translate(-50%, -50%) rotate(0deg) translateY(var(--offset))
@@ -284,7 +291,7 @@ button {
 #about > * {
     pointer-events: none;
 }
-.clickedBtn {
+:is(#about, .close) span {
     font-style: italic !important;
 }
 hr {
@@ -342,6 +349,9 @@ hr {
 .modal-wrapper * {
     pointer-events: none;
 }
+.modal a {
+    pointer-events: all;
+}
 .close {
     background-color: var(--color);
     z-index: 11;
@@ -388,18 +398,19 @@ header .kr::after {
     position: absolute;
     white-space: nowrap;
     transition: background-color 0.3s;
-    font: var(--font_h1);
+    font: var(--font_orbit);
+    line-height: 1.4;
     width: fit-content;
     padding: 4px 7px 3px 7px;
-    top: calc(3rem + 2vw);
-    left: 25px;
+    top: var(--exbInfoT);
+    left: var(--exbInfoL);
     z-index: 10;
     -webkit-transform: translate3d(0, 0, 2000px);
 }
 .title1::after {
     content: '';
     display: inline-block;
-    width: 7px;
+    width: 3px;
 }
 .exbInfo :is(.ml-en, .ml-num) {
     font-style: italic;
@@ -440,9 +451,6 @@ header .kr::after {
     .ontablet {
         display: inline;
     }
-    .tooltip {
-        top: calc(4rem + 3.5vw);
-    }
     /*
     .graphic > img {
         height: 80%;
@@ -463,14 +471,16 @@ header .kr::after {
 }
 @media screen and (max-width: 520px) {
     .container {
-        padding: 10px 11px;
+        padding: 10px 11px 15px 11px;
     }
     .graphic > img {
         height: 80%;
         max-height: 95vw;
     }
     .logo {
-        display: none;
+        height: calc(2rem + 2vw);
+        object-position: 3px center;
+        object-fit: contain;
     }
     .onmobile {
         display: block;
@@ -481,7 +491,7 @@ header .kr::after {
     #about,
     .close div {
         padding: 1px 4px;
-        width: 3.3rem;
+        width: 3rem;
     }
     #about {
         position: absolute;
@@ -490,8 +500,7 @@ header .kr::after {
     }
     .info {
         padding: 3px 4px;
-        margin-left: 0;
-        margin-right: 6px;
+        margin-left: 6px;
     }
     .modal {
         /*top: calc(1.9rem + 3vw);*/
@@ -513,6 +522,7 @@ header .kr::after {
     .tooltip {
         top: calc(2.5rem + 4vw + 30px);
         left: 11px;
+        font: var(--font_h1);
     }
     .title1::after {
         content: '';

@@ -33,6 +33,7 @@ const deptList = [
             posT :['calc(50*var(--vh) - 90vw)', 'calc(50*var(--vh) - 50vw)', 'calc(50*var(--vh) - 32vw)', 'calc(50*var(--vh) - 97vw)', 'null'],
             posL :['-7vw;', '-1.5vw', '-4.5vw', '-20vw', 'null']
         }],
+        tooltipPos: {top: 'calc(30vh - 2rem)',left: 'calc(72vw - 5rem)'}
     },
     {
         idx: 1, 
@@ -54,6 +55,7 @@ const deptList = [
             posL :['-17vw', '-2vw', '9vw', '-21vw', 'null']
         }],    
         color: '#D2BEFF',
+        tooltipPos: {top: 'calc(24vh - 2rem)',left: 'calc(54vw - 5rem)'}
     },
     {
         idx: 2, 
@@ -75,7 +77,7 @@ const deptList = [
             posL :['6vw', '-1vw', '-7vw', '12vw', 'null']
         }],
         color: '#84B4FF',
-
+        tooltipPos: {top: 'calc(25vh - 2rem)',left: 'calc(26vw - 5rem)'}
     },
     {
         idx: 3, 
@@ -97,7 +99,7 @@ const deptList = [
             posL :['-2vw', '-20vw', '6vw', '2vw', 'null']
         }],
         color: '#FF7C7C',
-
+        tooltipPos: {top: 'calc(75vh - 2rem)',left: 'calc(34vw - 5rem)'}
     },
     {
         idx: 4, 
@@ -119,7 +121,7 @@ const deptList = [
             posL :['-28vw', '-1vw', '-3vw', '2vw', 'null']
         }],
         color: '#FFFE48',
-
+        tooltipPos: {top: 'calc(67vh - 2rem)',left: 'calc(26vw - 5rem)'}
     },
     {
         idx: 5, 
@@ -141,7 +143,7 @@ const deptList = [
             posL :['14vw', '-17vw', '-4vw', '18vw', 'null']
         }],
         color: '#FFB33B',
-
+        tooltipPos: {top: 'calc(30vh - 2rem)',left: 'calc(72vw - 5rem)'}
     },
     {
         idx: 6, 
@@ -163,7 +165,7 @@ const deptList = [
             posL :['16vw', '-21vw', '10vw', '-2vw', 'null']
         }],
         color: '#8EFFFF',
-
+        tooltipPos: {top: 'calc(71vh - 2rem)',left: 'calc(17vw - 5rem)'}
     },
     {
         idx: 7, 
@@ -185,7 +187,7 @@ const deptList = [
             posL :['-6vw', '-2vw', '3vw', '6vw', 'null']
         }],
         color: '#74FFA4',
-
+        tooltipPos: {top: 'calc(19vh - 2rem)',left: 'calc(52vw - 5rem)'}
     },
     {
         idx: 8, 
@@ -207,7 +209,7 @@ const deptList = [
             posL :['-1vw', '-4vw', '-3vw', '12vw', 'null']
         }],
         color: '#95FE17',
-
+        tooltipPos: {top: 'calc(38vh - 2rem)',left: 'calc(82vw - 5rem)'}
     },
     {
         idx: 9, 
@@ -223,13 +225,13 @@ const deptList = [
             posL :['34.5vw', '29.5vw', '30.5vw', '14.5vw', '43.5vw']
         },{        //16:9 ratio width=100%
             posT :['calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
-            posL :['17.5vw', '16.5vw', '22.5vw', '6.5vw', '33.5vw']
+            posL :['calc(36vw - 8rem -)17.5vw', '16.5vw', '22.5vw', '6.5vw', '33.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 91vw)', 'calc(50*var(--vh) - 72vw)', 'calc(50*var(--vh) - 19vw)', 'calc(50*var(--vh) - 46vw)', 'null'],
             posL :['-8vw', '-3vw', '5vw', '0vw', 'null']
         }],
         color: '#DBF705',
-
+        tooltipPos: {top: 'calc(40vh - 2rem)',left: 'calc(15vw - 5rem)'}
     },
     {
         idx: 10, 
@@ -246,13 +248,12 @@ const deptList = [
         },{        //16:9 ratio width=100%
             posT :['calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 13.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 33.5vw)'],
             posL :['calc(36vw + 19.5vw - 8rem)', 'calc(36vw + 4vw - 8rem)', 'calc(36vw - 9vw - 8rem)', 'calc(36vw - 22vw - 8rem)', 'calc(36vw - 1vw - 8rem)']
-            //'32.5vw', '22.5vw', '-0.5vw', '-2.5vw', '19.5vw'
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 79vw)', 'calc(50*var(--vh) - 17vw)', 'calc(50*var(--vh) - 54vw)', 'calc(50*var(--vh) - 50vw)', 'null'],
             posL :['9vw', '-3vw', '-3vw', '-22vw', 'null']
         }],
         color: '#FFACFC',
-
+        tooltipPos: {top: 'calc(74vh - 2rem)',left: 'calc(23vw - 5rem)'}
   }
 ];
 
@@ -343,12 +344,19 @@ let delay = 100; // delay after event is "complete" to run callback
             await setGeoVars()
             .then(calculate)
             setRootCss()
-            if (window.innerHeight / window.innerWidth < 0.98 && window.innerWidth > 768 )
-            curPosIdx = 0; 
-            else  if (window.innerHeight / window.innerWidth < 1.9 && window.innerWidth > 520)
-            curPosIdx = 1; 
-            else
-            curPosIdx = 2; 
+            if (window.innerHeight / window.innerWidth < 0.98 && window.innerWidth > 768 ){
+                curPosIdx = 0; 
+                $('.logo').attr('src','source/hongiklogo.svg')
+            }
+            else  if (window.innerHeight / window.innerWidth < 1.9 && window.innerWidth > 520){
+                curPosIdx = 1; 
+                $('.logo').attr('src','source/hongiklogo.svg')
+            }
+            else{
+                curPosIdx = 2; 
+                $('.logo').attr('src','source/onlylogo.svg')
+            }
+            
             //console.log('resizing')
             //console.log(`deptIdx : ${deptIdx}, curPosIdx : ${curPosIdx}`)
             for (const el of graphicDOM){
@@ -410,9 +418,13 @@ $.each($('li.dept'), (j, el)=>{
             //dept highlight/blur
             el.classList.add('activeDept');
             $('li.dept').not(el).removeClass('activeDept')
-            
+
             //tooltip event
-            tooltip.css('display', 'block');
+            tooltip.css('display','block');
+            $(root).css({
+                '--exbInfoT': deptList[j].tooltipPos.top,
+                '--exbInfoL': deptList[j].tooltipPos.left,
+            })
             $('.title1').text(deptList[j].title)
             if (!deptList[j].title2) {$('.title2').css('display','none')}
             else($('.title2').html(`<br class="onmobile">${deptList[j].title2}`).css('display','inline'))
@@ -423,7 +435,6 @@ $.each($('li.dept'), (j, el)=>{
         }
     })
 })
-
 //200ms delay
 function initialDelay(){
     return new Promise(res => setTimeout(res, 200));
@@ -488,7 +499,6 @@ $('button').click(function(){
     }else{
         modal.css('display','none');        
     }
-    this.children[0].classList.toggle('clickedBtn')
 })
 $('body').click((e)=>{
     if(e.target !== $('button')[0] && e.target !== modal[0] && e.target !== $('.modal-wrapper')[0] && e.target !== $('.close')[0]){
@@ -498,7 +508,6 @@ $('body').click((e)=>{
 $('.close>div').click((e)=>{
     if(modal.css('display') === 'block'){
         modal.css('display','none');
-        document.getElementById('about').children[0].classList.toggle('clickedBtn');
         //console.log('toggled');           
     }
 })
