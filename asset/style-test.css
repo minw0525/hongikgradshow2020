@@ -284,6 +284,7 @@ button {
     cursor: pointer;
     width: calc(2rem + 3vw);
     height: fit-content;
+    height: -moz-fit-content;
     padding: 0 6px;
     text-align: center;
     z-index: 5000;
@@ -401,6 +402,7 @@ header .kr::after {
     font: var(--font_orbit);
     line-height: 1.4;
     width: fit-content;
+    width: -moz-fit-content;
     padding: 4px 7px 3px 7px;
     top: var(--exbInfoT);
     left: var(--exbInfoL);
