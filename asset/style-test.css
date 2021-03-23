@@ -45,8 +45,11 @@ body {
 }
 a {
     color: inherit;
-    text-decoration-thickness: from-font;
+    text-decoration-thickness: 1px;
     text-underline-offset: 5%;
+}
+a:hover {
+    text-decoration: none;
 }
 .container {
     padding: 20px 25px;
@@ -67,6 +70,14 @@ header {
 }
 header a {
     text-decoration: none;
+}
+header a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 5%;
+}
+header a:hover .ml-en {
+    text-underline-offset: 0.04em;
 }
 h1 {
     font: var(--font_h1);
@@ -89,6 +100,23 @@ main {
     justify-content: center;
     top: 0;
     left: 0;
+}
+.hover-detect {
+    top: 50%;
+    left: 50%;
+    width: calc(-2.1 * var(--offset));
+    height: calc(-2.1 * var(--offset));
+    position: absolute;
+    box-sizing: border-box;
+    padding: calc(3 * var(--vh)) 3vw;
+    border-radius: 50%;
+    border: 1px solid black;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) var(--orbit);
+    z-index: 20;
+}
+.hover-detect:hover {
+    border: 1px solid red;
 }
 .block {
     border: 1px solid black;
@@ -127,7 +155,7 @@ li.dept {
     animation: background-blur 22s alternate infinite;
     font: var(--font_orbit);
     will-change: transform;
-    z-index: 0;
+    z-index: 11;
 }
 .activeDept {
     font-weight: bold !important;
@@ -283,6 +311,8 @@ button {
     position: relative;
     cursor: pointer;
     width: calc(2rem + 3vw);
+    min-width: fit-content;
+    min-width: -moz-fit-content;
     height: fit-content;
     height: -moz-fit-content;
     padding: 0 6px;
@@ -292,7 +322,7 @@ button {
 #about > * {
     pointer-events: none;
 }
-:is(#about, .close) span {
+.clickedBtn {
     font-style: italic !important;
 }
 hr {
@@ -355,7 +385,7 @@ hr {
 }
 .close {
     background-color: var(--color);
-    z-index: 11;
+    z-index: 12;
     position: sticky;
     width: 100%;
     bottom: -1px;
@@ -406,7 +436,7 @@ header .kr::after {
     padding: 4px 7px 3px 7px;
     top: var(--exbInfoT);
     left: var(--exbInfoL);
-    z-index: 10;
+    z-index: 12;
     -webkit-transform: translate3d(0, 0, 2000px);
 }
 .title1::after {

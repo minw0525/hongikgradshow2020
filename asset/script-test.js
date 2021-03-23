@@ -437,6 +437,13 @@ $.each($('li.dept'), (j, el)=>{
         }
     })
 })
+$('.hover-detect').mouseleave(evt=>{
+    console.log(evt.target)
+    console.log($('.deptList').find('li.activeDept'))
+
+    $('.deptList').find('li.activeDept').removeClass('activeDept')
+    tooltip.css('display','none');
+})
 //200ms delay
 function initialDelay(){
     return new Promise(res => setTimeout(res, 200));
@@ -501,6 +508,7 @@ $('button').click(function(){
     }else{
         modal.css('display','none');        
     }
+   $(`#about span`).toggleClass('clickedBtn')
 })
 $('body').click((e)=>{
     if(e.target !== $('button')[0] && e.target !== modal[0] && e.target !== $('.modal-wrapper')[0] && e.target !== $('.close')[0]){
