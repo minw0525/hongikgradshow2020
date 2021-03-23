@@ -420,16 +420,18 @@ $.each($('li.dept'), (j, el)=>{
             $('li.dept').not(el).removeClass('activeDept')
 
             //tooltip event
-            tooltip.css('display','block');
-            $(root).css({
-                '--exbInfoT': deptList[j].tooltipPos.top,
-                '--exbInfoL': deptList[j].tooltipPos.left,
-            })
             $('.title1').text(deptList[j].title)
             if (!deptList[j].title2) {$('.title2').css('display','none')}
             else($('.title2').html(`<br class="onmobile">${deptList[j].title2}`).css('display','inline'))
             $('.link').attr('href', deptList[j].link)
             exbInfo.multilingual(['num','punct','en'])
+            tooltip.css('display','block');
+            let tooltipW =  tooltip.outerWidth();
+            let tooltipH =  tooltip.outerHeight();
+            $(root).css({
+                '--exbInfoL': `${evt.pageX + tooltipW < window.innerWidth ? evt.pageX : window.innerWidth - tooltipW - 20}px`,
+                '--exbInfoT': `${evt.pageY + tooltipH < window.innerHeight ? evt.pageY : window.innerHeight - tooltipH - 20}px`
+            })
             deptIdx = j;
             deptActive(j)
         }
