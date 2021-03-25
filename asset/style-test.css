@@ -483,20 +483,15 @@ header .ml-num,
     .ontablet {
         display: inline;
     }
-    /*
     .graphic > img {
         height: 80%;
-        max-height: calc(15rem + 35vw);
-    }*/
+        max-height: calc(15rem + 40vw);
+    }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .logo {
         width: 20vw;
         margin-right: 7px;
-    }
-    .graphic > img {
-        height: 80%;
-        max-height: calc(16rem + 22vw);
     }
 }
 @media screen and (max-width: 768px) {
@@ -507,7 +502,7 @@ header .ml-num,
     }
     .graphic > img {
         height: 80%;
-        max-height: 95vw;
+        max-height: 45vh;
     }
     .logo {
         height: calc(2rem + 2vw);

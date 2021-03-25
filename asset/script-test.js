@@ -10,6 +10,18 @@ const exbInfo = $('.exbInfo');
 const tooltip = $('.tooltip');
 const modal = $('.modal')
 
+
+function topleft(){
+    let topArr= [];
+    let leftArr = [];
+    for (let i = 0; i<5; i++){
+        topArr.push(`'${$('.graphic > img')[i].style.top}'`);
+        leftArr.push(`'${$('.graphic > img')[i].style.left}'`);
+    }
+    console.log(`posT: [${topArr}],
+posL: [${leftArr}]`)
+}
+
 const deptList = [
     {
         idx: 0, 
@@ -24,14 +36,14 @@ const deptList = [
         pos: [{    // 21:9 ratio width=100%...desktop
 //            posT :['-5%', '20%', '24%', '30%', '30%'],
 //            posL :['15%', '22%', '20%', '35%', '40%']
-            posT :['calc(47*var(--vh) - 30vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 24vw)', 'calc(47*var(--vh) - 14vw)'],
-            posL :['15vw', '19vw', '19vw', '35vw', '40vw']
+            posT: ['calc(47*var(--vh) - 30vw)','calc(47*var(--vh) - 18.5vw)','calc(47*var(--vh) - 15.5vw)','calc(47*var(--vh) - 24vw)','calc(47*var(--vh) - 14vw)'],
+            posL: ['16vw','15vw','20vw','38vw','41vw']
         },{        //16:9 ratio width=100%...pad
-            posT :['calc(47*var(--vh) - 45vw)', 'calc(47*var(--vh) - 25.5vw)', 'calc(47*var(--vh) - 25.5vw)', 'calc(47*var(--vh) - 37vw)', 'calc(47*var(--vh) - 17vw)'],
-            posL :['2vw', '9vw', '8vw', '29vw', '31vw']
+            posT: ['calc(47*var(--vh) - 50vw)','calc(47*var(--vh) - 25.5vw)','calc(47*var(--vh) - 24.5vw)','calc(47*var(--vh) - 41vw)','calc(47*var(--vh) - 17vw)'],
+            posL: ['-8vw','-4vw','0vw','32vw','29vw']
         },{        //9:21 ratio width=100%...mobile
-            posT :['calc(50*var(--vh) - 90vw)', 'calc(50*var(--vh) - 50vw)', 'calc(50*var(--vh) - 32vw)', 'calc(50*var(--vh) - 97vw)', 'null'],
-            posL :['-7vw;', '-1.5vw', '-4.5vw', '-20vw', 'null']
+            posT :['calc(50*var(--vh) - 75vw)', 'calc(50*var(--vh) - 50vw)', 'calc(50*var(--vh) - 22vw)', 'calc(50*var(--vh) - 88vw)', 'null'],
+            posL :['calc(47vw - 22.5vh)', 'calc(47vw - 22.5vh)', 'calc(47vw - 22.5vh)', 'calc(47vw - 29.5vh)', 'null']
         }],
         tooltipPos: {top: 'calc(30vh - 2rem)',left: 'calc(72vw - 5rem)'}
     },
@@ -45,14 +57,14 @@ const deptList = [
         Y : '100px',
         source : `./source/sculpt/sculpture_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 14vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 20.5vw)'],
-            posL :['10vw', '33.5vw', '18.5vw', '46.5vw', '32.5vw']
+            posT: ['calc(47*var(--vh) - 20.5vw)','calc(47*var(--vh) - 20.5vw)','calc(47*var(--vh) - 14vw)','calc(47*var(--vh) - 9.5vw)','calc(47*var(--vh) - 22.5vw)'],
+            posL: ['7vw','34.5vw','18.5vw','48.5vw','39.5vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 13vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 22.5vw)'],
-            posL :['2vw', '28.5vw', '8.5vw', '38.5vw', '24.5vw']
+            posT: ['calc(47*var(--vh) - 31.5vw)','calc(47*var(--vh) - 20.5vw)','calc(47*var(--vh) - 13vw)','calc(47*var(--vh) - 6.5vw)','calc(47*var(--vh) - 22.5vw)'],
+            posL: ['-3vw','24.5vw','0.5vw','38.5vw','24.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 70vw)', 'calc(50*var(--vh) - 76vw)', 'calc(50*var(--vh) - 10vw)', 'calc(50*var(--vh) - 30vw)', 'null'],
-            posL :['-17vw', '-2vw', '9vw', '-21vw', 'null']
+            posT: ['calc(50*var(--vh) - 49vw)','calc(50*var(--vh) - 64vw)','calc(50*var(--vh) - -4vw)','calc(50*var(--vh) - 29vw)',''],
+            posL: ['calc(47vw - 12.5vh)','calc(47vw - 24.5vh)','calc(47vw - 22.5vh)','calc(47vw - 30.5vh)','']
         }],    
         color: '#D2BEFF',
         tooltipPos: {top: 'calc(24vh - 2rem)',left: 'calc(54vw - 5rem)'}
@@ -67,14 +79,14 @@ const deptList = [
         Y : '100px',
         source : `./source/op/oriental_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 21.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 11.5vw)'],
-            posL :['13.5vw', '45.5vw', '39.5vw', '13.5vw', '24.5vw']
+            posT: ['calc(47*var(--vh) - 27.5vw)','calc(47*var(--vh) - 24.5vw)','calc(47*var(--vh) - 22.5vw)','calc(47*var(--vh) - 18.5vw)','calc(47*var(--vh) - 9.5vw)'],
+            posL: ['7.5vw','47.5vw','39.5vw','8.5vw','22.5vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 8.5vw)'],
-            posL :['0.5vw', '37.5vw', '30.5vw', '2.5vw', '17.5vw']
+            posT: ['calc(47*var(--vh) - 63.5vw)','calc(47*var(--vh) - 39.5vw)','calc(47*var(--vh) - 37.5vw)','calc(47*var(--vh) - 26.5vw)','calc(47*var(--vh) - 7.5vw)'],
+            posL: ['-7.5vw','33.5vw','18.5vw','-12.5vw','14.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 101vw)', 'calc(50*var(--vh) - 59vw)', 'calc(50*var(--vh) - 24vw)', 'calc(50*var(--vh) - 36vw)', 'null'],
-            posL :['6vw', '-1vw', '-7vw', '12vw', 'null']
+            posT: ['calc(50*var(--vh) - 101vw)','calc(50*var(--vh) - 59vw)','calc(50*var(--vh) - 23vw)','calc(50*var(--vh) - 31vw)',''],
+            posL: ['calc(47vw - 17.5vh)','calc(47vw - 24.5vh)','calc(47vw - 25.5vh)','calc(47vw - 17.5vh)','']
         }],
         color: '#84B4FF',
         tooltipPos: {top: 'calc(25vh - 2rem)',left: 'calc(26vw - 5rem)'}
@@ -89,14 +101,14 @@ const deptList = [
         Y : '100px',
         source : `./source/id/industrial_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 30.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
-            posL :['18.5vw', '38.5vw', '27.5vw', '43.5vw', '25.5vw']
+            posT: ['calc(47*var(--vh) - 29.5vw)','calc(47*var(--vh) - 17.5vw)','calc(47*var(--vh) - 30.5vw)','calc(47*var(--vh) - 10.5vw)','calc(47*var(--vh) - 17.5vw)'],
+            posL: ['15.5vw','38.5vw','22.5vw','46.5vw','22.5vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 33.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 37.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
-            posL :['5.5vw', '26.5vw', '14.5vw', '31.5vw', '11.5vw']
+            posT: ['calc(47*var(--vh) - 48.5vw)','calc(47*var(--vh) - 16.5vw)','calc(47*var(--vh) - 58.5vw)','calc(47*var(--vh) - 10.5vw)','calc(47*var(--vh) - 26.5vw)'],
+            posL: ['3.5vw','23.5vw','10.5vw','31.5vw','8.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 75vw)', 'calc(50*var(--vh) - 49vw)', 'calc(50*var(--vh) - 78vw)', 'calc(50*var(--vh) - 10vw)', 'null'],
-            posL :['-2vw', '-20vw', '6vw', '2vw', 'null']
+            posT: ['calc(50*var(--vh) - 70vw)','calc(50*var(--vh) - 44vw)','calc(50*var(--vh) - 72vw)','calc(50*var(--vh) - 4vw)',''],
+            posL: ['calc(47vw - 22.5vh)','calc(47vw - 31.5vh)','calc(47vw - 20.5vh)','calc(47vw - 22.5vh)','']
         }],
         color: '#FF7C7C',
         tooltipPos: {top: 'calc(75vh - 2rem)',left: 'calc(34vw - 5rem)'}
@@ -111,14 +123,14 @@ const deptList = [
         Y : '100px',
         source : `./source/vcd/viscom_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 19.5vw)', 'calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 12.5vw)', 'calc(47*var(--vh) - 19.5vw)'],
-            posL :['39.5vw', '8.5vw', '26.5vw', '19.5vw', '33.5vw']
+            posT: ['calc(47*var(--vh) - 9.5vw)','calc(47*var(--vh) - 19.5vw)','calc(47*var(--vh) - 29.5vw)','calc(47*var(--vh) - 12.5vw)','calc(47*var(--vh) - 21.5vw)'],
+            posL: ['41.5vw','5.5vw','23.5vw','18.5vw','36.5vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 39.5vw)', 'calc(47*var(--vh) - 12.5vw)', 'calc(47*var(--vh) - 19.5vw)'],
-            posL :['32.5vw', '-6.5vw', '12.5vw', '9.5vw', '25.5vw']
+            posT: ['calc(47*var(--vh) - 4.5vw)','calc(47*var(--vh) - 23.5vw)','calc(47*var(--vh) - 53.5vw)','calc(47*var(--vh) - 25.5vw)','calc(47*var(--vh) - 38.5vw)'],
+            posL: ['20.5vw','-16.5vw','9.5vw','4.5vw','25.5vw']
         },{        //9:21 ratio width=100%
             posT :['calc(50*var(--vh) - 27vw)', 'calc(50*var(--vh) - 83vw)', 'calc(50*var(--vh) - 13vw)', 'calc(50*var(--vh) - 49vw)', 'null'],
-            posL :['-28vw', '-1vw', '-3vw', '2vw', 'null']
+            posL: ['calc(47vw - 35.5vh)','calc(47vw - 22.5vh)','calc(47vw - 22.5vh)','calc(47vw - 19.5vh)','']
         }],
         color: '#FFFE48',
         tooltipPos: {top: 'calc(67vh - 2rem)',left: 'calc(26vw - 5rem)'}
@@ -133,14 +145,14 @@ const deptList = [
         Y : '100px',
         source : `./source/c&g/ceramic_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 16.5vw)'],
-            posL :['14.5vw', '37.5vw', '15.5vw', '31.5vw', '47.5vw']
+            posT: ['calc(47*var(--vh) - 24.5vw)','calc(47*var(--vh) - 29.5vw)','calc(47*var(--vh) - 9.5vw)','calc(47*var(--vh) - 15.5vw)','calc(47*var(--vh) - 16.5vw)'],
+            posL: ['10.5vw','40.5vw','13.5vw','31.5vw','50vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 33.5vw)', 'calc(47*var(--vh) - 39.5vw)', 'calc(47*var(--vh) - 9.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 16.5vw)'],
-            posL :['0.5vw', '27.5vw', '9.5vw', '25.5vw', '42.5vw']
+            posT: ['calc(47*var(--vh) - 43.5vw)','calc(47*var(--vh) - 56.5vw)','calc(47*var(--vh) - 9.5vw)','calc(47*var(--vh) - 21.5vw)','calc(47*var(--vh) - 8.5vw)'],
+            posL: ['-0.5vw','27.5vw','-6.5vw','18.5vw','36.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 91vw)', 'calc(50*var(--vh) - 59vw)', 'calc(50*var(--vh) - 30vw)', 'calc(50*var(--vh) - 70vw)', 'null'],
-            posL :['14vw', '-17vw', '-4vw', '18vw', 'null']
+            posT: ['calc(50*var(--vh) - 90vw)','calc(50*var(--vh) - 64vw)','calc(50*var(--vh) - 23vw)','calc(50*var(--vh) - 70vw)',''],
+            posL: ['calc(47vw - 15.5vh)','calc(47vw - 27.5vh)','calc(47vw - 22.5vh)','calc(47vw - 11.5vh)','']
         }],
         color: '#FFB33B',
         tooltipPos: {top: 'calc(30vh - 2rem)',left: 'calc(72vw - 5rem)'}
@@ -155,14 +167,14 @@ const deptList = [
         Y : '100px',
         source : `./source/paint/painting_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 23.5vw)', 'calc(47*var(--vh) - 14.5vw)', 'calc(47*var(--vh) - 30.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 14.5vw)'],
-            posL :['15.5vw', '14.5vw', '42.5vw', '38.5vw', '28.5vw']
+            posT: ['calc(47*var(--vh) - 23.5vw)','calc(47*var(--vh) - 13.5vw)','calc(47*var(--vh) - 29.5vw)','calc(47*var(--vh) - 18.5vw)','calc(47*var(--vh) - 10.5vw)'],
+            posL: ['15.5vw','10.5vw','50.5vw','40.5vw','30.5vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 33.5vw)', 'calc(47*var(--vh) - 14.5vw)', 'calc(47*var(--vh) - 38.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 10.5vw)'],
-            posL :['3.5vw', '4.5vw', '35.5vw', '30.5vw', '25.5vw']
+            posT: ['calc(47*var(--vh) - 50.5vw)','calc(47*var(--vh) - 14.5vw)','calc(47*var(--vh) - 46.5vw)','calc(47*var(--vh) - 29.5vw)','calc(47*var(--vh) - 5.5vw)'],
+            posL: ['-6.5vw','-5.5vw','35.5vw','25.5vw','11.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 8vw)', 'calc(50*var(--vh) - 30vw)', 'calc(50*var(--vh) - 88vw)', 'calc(50*var(--vh) - 65vw)', 'null'],
-            posL :['16vw', '-21vw', '10vw', '-2vw', 'null']
+            posT: ['calc(50*var(--vh) - 1vw)','calc(50*var(--vh) - 30vw)','calc(50*var(--vh) - 86vw)','calc(50*var(--vh) - 50vw)',''],
+            posL: ['calc(47vw - 10.5vh)','calc(47vw - 32.5vh)','calc(47vw - 11.5vh)','calc(47vw - 22.5vh)','']
         }],
         color: '#8EFFFF',
         tooltipPos: {top: 'calc(71vh - 2rem)',left: 'calc(17vw - 5rem)'}
@@ -177,14 +189,14 @@ const deptList = [
         Y : '100px',
         source : `./source/print/printmaking_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 8.5vw)', 'calc(47*var(--vh) - 21.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 21.5vw)'],
-            posL :['51.5vw', '30.5vw', '26.5vw', '13.5vw', '33.5vw']
+            posT: ['calc(47*var(--vh) - 22.5vw)','calc(47*var(--vh) - 21.5vw)','calc(47*var(--vh) - 16.5vw)','calc(47*var(--vh) - 15.5vw)','calc(47*var(--vh) - 21.5vw)'],
+            posL: ['54.5vw','30.5vw','26.5vw','11.5vw','33.5vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 8.5vw)', 'calc(47*var(--vh) - 29.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 22.5vw)', 'calc(47*var(--vh) - 21.5vw)'],
-            posL :['37.5vw', '20.5vw', '18.5vw', '5.5vw', '28.5vw']
+            posT: ['calc(47*var(--vh) - 6.5vw)','calc(47*var(--vh) - 34.5vw)','calc(47*var(--vh) - 14.5vw)','calc(47*var(--vh) - 30.5vw)','calc(47*var(--vh) - 29.5vw)'],
+            posL: ['30.5vw','12.5vw','-4.5vw','1.5vw','21.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 5vw)', 'calc(50*var(--vh) - 43vw)', 'calc(50*var(--vh) - 91vw)', 'calc(50*var(--vh) - 58vw)', 'null'],
-            posL :['-6vw', '-2vw', '3vw', '6vw', 'null']
+            posT: ['calc(50*var(--vh) - 2vw)','calc(50*var(--vh) - 39vw)','calc(50*var(--vh) - 81vw)','calc(50*var(--vh) - 53vw)',''],
+            posL :['calc(47vw - 22.5vh)', 'calc(47vw - 22.5vh)', 'calc(47vw - 22.5vh)', 'calc(47vw - 22.5vh)', 'null']
         }],
         color: '#74FFA4',
         tooltipPos: {top: 'calc(19vh - 2rem)',left: 'calc(52vw - 5rem)'}
@@ -199,14 +211,14 @@ const deptList = [
         Y : '100px',
         source : `./source/w&f/woodwork_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 19.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 13.5vw)'],
-            posL :['24.5vw', '15.5vw', '21.5vw', '34.5vw', '45.5vw']
+            posT: ['calc(47*var(--vh) - 16.5vw)','calc(47*var(--vh) - 24.5vw)','calc(47*var(--vh) - 18.5vw)','calc(47*var(--vh) - 16.5vw)','calc(47*var(--vh) - 14.5vw)'],
+            posL: ['11.5vw','36.5vw','16.5vw','39.5vw','50.5vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 27.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 20.5vw)', 'calc(47*var(--vh) - 22.5vw)'],
-            posL :['14.5vw', '5.5vw', '14.5vw', '29.5vw', '42.5vw']
+            posT: ['calc(47*var(--vh) - 39.5vw)','calc(47*var(--vh) - 19.5vw)','calc(47*var(--vh) - 26.5vw)','calc(47*var(--vh) - 30.5vw)','calc(47*var(--vh) - 12.5vw)'],
+            posL: ['4.5vw','1.5vw','-1.5vw','18.5vw','34.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 36vw)', 'calc(50*var(--vh) - 84vw)', 'calc(50*var(--vh) - 24vw)', 'calc(50*var(--vh) - 48vw)', 'null'],
-            posL :['-1vw', '-4vw', '-3vw', '12vw', 'null']
+            posT: ['calc(50*var(--vh) - 36vw)','calc(50*var(--vh) - 75vw)','calc(50*var(--vh) - 22vw)','calc(50*var(--vh) - 46vw)',''],
+            posL: ['calc(47vw - 22.5vh)','calc(47vw - 27.5vh)','calc(47vw - 22.5vh)','calc(47vw - 13.5vh)','']
         }],
         color: '#95FE17',
         tooltipPos: {top: 'calc(38vh - 2rem)',left: 'calc(82vw - 5rem)'}
@@ -221,14 +233,14 @@ const deptList = [
         Y : '100px',
         source : `./source/mad/metal_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
-            posL :['34.5vw', '29.5vw', '30.5vw', '14.5vw', '43.5vw']
+            posT: ['calc(47*var(--vh) - 15.5vw)','calc(47*var(--vh) - 22.5vw)','calc(47*var(--vh) - 17.5vw)','calc(47*var(--vh) - 24.5vw)','calc(47*var(--vh) - 20.5vw)'],
+            posL: ['31.5vw','28.5vw','26.5vw','7.5vw','44.5vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 24.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 18.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 17.5vw)'],
-            posL :['calc(36vw - 8rem -)17.5vw', '16.5vw', '22.5vw', '6.5vw', '33.5vw']
+            posT: ['calc(47*var(--vh) - 29.5vw)','calc(47*var(--vh) - 26.5vw)','calc(47*var(--vh) - 15.5vw)','calc(47*var(--vh) - 52.5vw)','calc(47*var(--vh) - 20.5vw)'],
+            posL: ['-5.5vw','16.5vw','19.5vw','11.5vw','31.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 91vw)', 'calc(50*var(--vh) - 72vw)', 'calc(50*var(--vh) - 19vw)', 'calc(50*var(--vh) - 46vw)', 'null'],
-            posL :['-8vw', '-3vw', '5vw', '0vw', 'null']
+            posT: ['calc(50*var(--vh) - 87vw)','calc(50*var(--vh) - 64vw)','calc(50*var(--vh) - 9vw)','calc(50*var(--vh) - 34vw)',''],
+            posL: ['calc(47vw - 29.5vh)','calc(47vw - 23.5vh)','calc(47vw - 17.5vh)','calc(47vw - 21.5vh)','']
         }],
         color: '#DBF705',
         tooltipPos: {top: 'calc(40vh - 2rem)',left: 'calc(15vw - 5rem)'}
@@ -243,14 +255,14 @@ const deptList = [
         Y : '100px',
         source : `./source/art/artstudies_`,
         pos: [{
-            posT :['calc(47*var(--vh) - 19.5vw)', 'calc(47*var(--vh) - 16.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 17.5vw)', 'calc(47*var(--vh) - 26.5vw)'],
-            posL :['44.5vw', '34.5vw', '13.5vw', '7.5vw', '27.5vw']
+            posT: ['calc(47*var(--vh) - 19.5vw)','calc(47*var(--vh) - 17.5vw)','calc(47*var(--vh) - 10.5vw)','calc(47*var(--vh) - 17.5vw)','calc(47*var(--vh) - 27.5vw)'],
+            posL: ['45.5vw','35.5vw','11.5vw','3.5vw','26.5vw']
         },{        //16:9 ratio width=100%
-            posT :['calc(47*var(--vh) - 15.5vw)', 'calc(47*var(--vh) - 13.5vw)', 'calc(47*var(--vh) - 11.5vw)', 'calc(47*var(--vh) - 26.5vw)', 'calc(47*var(--vh) - 33.5vw)'],
-            posL :['calc(36vw + 19.5vw - 8rem)', 'calc(36vw + 4vw - 8rem)', 'calc(36vw - 9vw - 8rem)', 'calc(36vw - 22vw - 8rem)', 'calc(36vw - 1vw - 8rem)']
+            posT: ['calc(47*var(--vh) - 34.5vw)','calc(47*var(--vh) - 11.5vw)','calc(47*var(--vh) - 22.5vw)','calc(47*var(--vh) - 3.5vw)','calc(47*var(--vh) - 43.5vw)'],
+            posL: ['-8.5vw','10.5vw','11.5vw','-12.5vw','26.5vw']
         },{        //9:21 ratio width=100%
-            posT :['calc(50*var(--vh) - 79vw)', 'calc(50*var(--vh) - 17vw)', 'calc(50*var(--vh) - 54vw)', 'calc(50*var(--vh) - 50vw)', 'null'],
-            posL :['9vw', '-3vw', '-3vw', '-22vw', 'null']
+            posT: ['calc(50*var(--vh) - 75vw)','calc(50*var(--vh) - 3vw)','calc(50*var(--vh) - 43vw)','calc(50*var(--vh) - 50vw)',''],
+            posL: ['calc(47vw - 12.5vh)','calc(47vw - 22.5vh)','calc(47vw - 24.5vh)','calc(47vw - 35.5vh)','']            
         }],
         color: '#FFACFC',
         tooltipPos: {top: 'calc(74vh - 2rem)',left: 'calc(23vw - 5rem)'}
@@ -405,7 +417,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
 
 let orbitHovered, tooltipHovered, tempDept;
 
-$('.deptList').mouseenter(e=>{
+$('.deptList').on('click mouseenter',(e=>{
     let j = $(e.target).index();
     if (e.target.tagName === 'LI' && tempDept !==e.target){
         tempDept = e.target
@@ -439,7 +451,7 @@ $('.deptList').mouseenter(e=>{
         }
     }
 })
-
+)
 
 $('.orbit').hover(()=>{
     orbitHovered = true;
