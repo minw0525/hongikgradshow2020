@@ -33,6 +33,9 @@ font-family: 'Noto Serif KR', serif;*/
 * {
     word-break: keep-all;
 }
+html {
+    height: calc(var(--vh) * 100);
+}
 body {
     margin: 0;
     padding: 0;
