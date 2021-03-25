@@ -330,7 +330,8 @@ hr {
     z-index: 5000;
     -webkit-transform: translate3d(0, 0, 3000px);
 }
-.modal :is(.ml-en, .ml-num) {
+.modal .ml-en,
+.modal .ml-num {
     line-height: calc(0.63rem + 0.7vw);
 }
 .modal hr {
@@ -428,16 +429,27 @@ header .kr::after {
     display: inline-block;
     width: 3px;
 }
-.exbInfo :is(.ml-en, .ml-num) {
+.exbInfo .ml-en,
+.exbInfo .ml-num {
     font-style: italic;
 }
 .title1 .ml-num {
     font-style: normal;
 }
-:is(footer, .modal) :is(.ml-en, .ml-num) {
+footer .ml-en,
+footer .ml-num,
+.modal .ml-en,
+.modal .ml-num {
     font-family: 'Jost', sans-serif;
 }
-:is(header, .tooltip, .close, .dept) :is(.ml-en, .ml-num) {
+header .ml-en,
+header .ml-num,
+.tooltip .ml-en,
+.tooltip .ml-num,
+.close .ml-en,
+.close .ml-num,
+.dept .ml-en,
+.dept .ml-num {
     font-family: 'EB Garamond', 'Noto Serif KR', serif;
     position: relative;
     top: -0.04em;
