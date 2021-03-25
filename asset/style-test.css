@@ -74,13 +74,15 @@ header {
 header a {
     text-decoration: none;
 }
-header a:hover {
+header a:hover span {
     text-decoration: underline;
-    text-decoration-thickness: from-font;
-    text-underline-offset: 5%;
+    text-decoration-thickness: 1px;
 }
-header a:hover .ml-en {
-    text-underline-offset: 0.04em;
+header a:hover .kr {
+    text-underline-offset: 0.12em;
+}
+header a:hover .en {
+    text-underline-offset: 0.15em;
 }
 h1 {
     font: var(--font_h1);
@@ -364,6 +366,8 @@ hr {
     overflow: auto;
     overflow-x: hidden;
     box-sizing: border-box;
+    scrollbar-color: var(--color) ghostwhite; /*moz*/
+    scrollbar-width: thin; /*moz*/
 }
 .modal-wrapper * {
     pointer-events: none;
@@ -421,7 +425,7 @@ header .kr::after {
     line-height: 1.4;
     width: fit-content;
     width: -moz-fit-content;
-    padding: 4px 7px 3px 7px;
+    padding: 4px 9px 3px 9px;
     top: var(--exbInfoT);
     left: var(--exbInfoL);
     z-index: 12;
