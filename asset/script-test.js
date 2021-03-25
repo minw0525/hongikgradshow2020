@@ -346,15 +346,12 @@ let delay = 100; // delay after event is "complete" to run callback
             setRootCss()
             if (window.innerHeight / window.innerWidth < 0.98 && window.innerWidth > 768 ){
                 curPosIdx = 0; 
-                $('.logo').attr('src','source/hongiklogo.svg')
             }
             else  if (window.innerHeight / window.innerWidth < 1.9 && window.innerWidth > 520){
                 curPosIdx = 1; 
-                $('.logo').attr('src','source/hongiklogo.svg')
             }
             else{
                 curPosIdx = 2; 
-                $('.logo').attr('src','source/onlylogo.svg')
             }
             
             //console.log('resizing')
@@ -406,44 +403,78 @@ window.addEventListener('DOMContentLoaded', async ()=>{
     deptActive(deptIdx)
 })
 
+let orbitHovered, tooltipHovered, tempDept;
 
-//dept mouse over event
-$.each($('li.dept'), (j, el)=>{
-    $(el).mouseenter(async (evt)=>{
-        //console.log(j)
-        //console.log(deptIdx)
+$('.deptList').mouseenter(e=>{
+    let j = $(e.target).index();
+    if (e.target.tagName === 'LI' && tempDept !==e.target){
+        tempDept = e.target
+  
+        let el = e.target
+        //        evt.타겟 볼드//나머지 볼드해제         
+        el.classList.add('activeDept');
+        $('li.dept').not(el).removeClass('activeDept')
+
+        //          툴팁 내용 링크 갈아끼우기               
+        $('.title1').text(deptList[j].title)
+        if (!deptList[j].title2) {$('.title2').css('display','none')}
+        else($('.title2').html(`<br class="onmobile">${deptList[j].title2}`).css('display','inline'))
+        $('.link').attr('href', deptList[j].link)
+        exbInfo.multilingual(['num','punct','en'])
+
+        //          툴팁 보이게, evt위치 따라 위치지정       
+        tooltip.css('display','block');
+        let tooltipW =  tooltip.outerWidth();
+        let tooltipH =  tooltip.outerHeight();
+        $(root).css({
+            '--exbInfoL': `${e.pageX + tooltipW < window.innerWidth ? e.pageX - 5 : window.innerWidth - tooltipW - 30}px`,
+            '--exbInfoT': `${e.pageY + tooltipH < window.innerHeight ? e.pageY - 5 : window.innerHeight - tooltipH - 30}px`
+        })
+
+        //        타겟 인덱스 deptIdx에 대입
     
-        if(!el.classList.contains('activeDept') && j !== deptIdx){
-
-            //dept highlight/blur
-            el.classList.add('activeDept');
-            $('li.dept').not(el).removeClass('activeDept')
-
-            //tooltip event
-            $('.title1').text(deptList[j].title)
-            if (!deptList[j].title2) {$('.title2').css('display','none')}
-            else($('.title2').html(`<br class="onmobile">${deptList[j].title2}`).css('display','inline'))
-            $('.link').attr('href', deptList[j].link)
-            exbInfo.multilingual(['num','punct','en'])
-            tooltip.css('display','block');
-            let tooltipW =  tooltip.outerWidth();
-            let tooltipH =  tooltip.outerHeight();
-            $(root).css({
-                '--exbInfoL': `${evt.pageX + tooltipW < window.innerWidth ? evt.pageX : window.innerWidth - tooltipW - 20}px`,
-                '--exbInfoT': `${evt.pageY + tooltipH < window.innerHeight ? evt.pageY : window.innerHeight - tooltipH - 20}px`
-            })
+        if(j !== deptIdx) {
             deptIdx = j;
             deptActive(j)
         }
-    })
+    }
 })
-$('.hover-detect').mouseleave(evt=>{
-    console.log(evt.target)
-    console.log($('.deptList').find('li.activeDept'))
 
-    $('.deptList').find('li.activeDept').removeClass('activeDept')
-    tooltip.css('display','none');
+
+$('.orbit').hover(()=>{
+    orbitHovered = true;
+//    console.log(`orbit ${orbitHovered}`)
+},(e)=>{
+    e.stopPropagation();
+    //console.log(`orbit ${orbitHovered}`)
+    orbitHovered = false;
+    //console.log(`orbit에서 실행됨${orbitHovered} ${tooltipHovered}`)
+    setTimeout(() => {
+        turnOffDeptHighlight(orbitHovered, tooltipHovered)        
+    }, 16);
 })
+
+$('.tooltip').hover(()=>{
+    tooltipHovered = true;
+    //console.log(`tooltipHovered ${tooltipHovered}`)
+},()=>{
+    tooltipHovered = false;
+    //console.log(`tooltipHovered ${tooltipHovered}`)
+    //console.log(`tooltip에서 실행됨${orbitHovered} ${tooltipHovered}`)
+    setTimeout(() => {
+        turnOffDeptHighlight(orbitHovered, tooltipHovered)        
+    }, 16);
+})
+
+function turnOffDeptHighlight(a, b){
+    if(!a && !b){
+        $('.deptList').find('li.activeDept').removeClass('activeDept')
+        tooltip.css('display','none');
+        //console.log('highlight off')
+        tempDept = null;
+    }
+}
+
 //200ms delay
 function initialDelay(){
     return new Promise(res => setTimeout(res, 200));

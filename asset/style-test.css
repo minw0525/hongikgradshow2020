@@ -101,23 +101,6 @@ main {
     top: 0;
     left: 0;
 }
-.hover-detect {
-    top: 50%;
-    left: 50%;
-    width: calc(-2.1 * var(--offset));
-    height: calc(-2.1 * var(--offset));
-    position: absolute;
-    box-sizing: border-box;
-    padding: calc(3 * var(--vh)) 3vw;
-    border-radius: 50%;
-    border: 1px solid black;
-    transform-style: preserve-3d;
-    transform: translate(-50%, -50%) var(--orbit);
-    z-index: 20;
-}
-.hover-detect:hover {
-    border: 1px solid red;
-}
 .block {
     border: 1px solid black;
     padding: 6px 9px;
@@ -126,8 +109,9 @@ main {
 }
 .orbit {
     position: absolute;
-    width: 50vw;
-    height: calc(var(--vh) * 50);
+    width: calc(-2.4 * var(--offset));
+    height: calc(-2.4 * var(--offset));
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -458,6 +442,10 @@ header .kr::after {
     position: relative;
     top: -0.04em;
 }
+.ml-en,
+.ml-num {
+    pointer-events: none;
+}
 @keyframes up-down {
     0% {
         /*transform: translateX(-50%) translateY(0px);*/
@@ -511,7 +499,6 @@ header .kr::after {
     }
     .logo {
         height: calc(2rem + 2vw);
-        object-position: 3px center;
         object-fit: contain;
     }
     .onmobile {
@@ -533,6 +520,9 @@ header .kr::after {
     .info {
         padding: 3px 4px;
         margin-left: 6px;
+    }
+    footer > div > a:first-child .info {
+        margin-left: 0;
     }
     .modal {
         /*top: calc(1.9rem + 3vw);*/
