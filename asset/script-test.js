@@ -250,7 +250,7 @@ const deptList = [
         dept : 'art',
         title: '클릭, 스크롤, 줌하라!',
         title2: '  Click, Scroll, Zoom!',
-        link: 'https://clickscrollzoom.com',
+        link: 'http://clickscrollzoom.com',
         X : '66px',
         Y : '100px',
         source : `./source/art/artstudies_`,
